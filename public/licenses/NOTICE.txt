@@ -1,0 +1,4 @@
+Three.js — Copyright Three.js authors — MIT (Three-MIT.txt).
+MediaPipe Tasks Vision — Google LLC — Apache License 2.0 (Apache-2.0.txt).
+MediaPipe Pose Landmarker Lite model: https://storage.googleapis.com/mediapipe-models/pose_landmarker/pose_landmarker_lite/float16/1/pose_landmarker_lite.task
+The app processes camera frames locally and makes no runtime upload requests.

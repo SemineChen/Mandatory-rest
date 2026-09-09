@@ -1,0 +1,7 @@
+node_modules/
+.DS_Store
+.test-profile/
+artifacts/
+*.zip
+歇一会-Chrome插件/
+歇一会-Chrome插件 2/
