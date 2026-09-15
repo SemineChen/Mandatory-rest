@@ -1,6 +1,6 @@
 import {initialState} from './state.js';
 const $=id=>document.getElementById(id),ext=!!globalThis.chrome?.runtime?.id;let s=initialState();
-async function send(m){if(!ext){location.href='break.html';return;}const r=await chrome.runtime.sendMessage(m);if(r.error)throw Error(r.error);s=r;render();}
+async function send(m){if(!ext){location.href='demo-workspace.html?rest-preview=1';return;}const r=await chrome.runtime.sendMessage(m);if(r.error)throw Error(r.error);s=r;render();}
 function render(){$('headline').textContent=s.active?'小歇在等你，一起动一动。':s.paused?'慢慢来，提醒已暂停。':'下一次，给自己充充电。';$('timer').textContent=s.active?'休息中':s.nextAt?`${Math.max(0,Math.ceil((s.nextAt-Date.now())/60000))} 分钟`:'已暂停';$('stats').textContent=`累计完成 ${s.completed} 组休息 · 给身体一点关照`;$('interval').value=String(s.interval);$('now').textContent=s.active?'继续这组休息 ↗':'现在休息一下 ↗';$('pause').textContent=s.paused?'恢复提醒':'暂停提醒 30 分钟';}
 $('now').onclick=()=>send({type:s.active?'open':'start'}).catch(e=>$('note').textContent=e.message);$('pause').onclick=()=>send({type:s.paused?'resume':'pause',minutes:30}).catch(e=>$('note').textContent=e.message);$('interval').onchange=()=>send({type:'settings',interval:Number($('interval').value)}).catch(e=>$('note').textContent=e.message);
 if(ext){send({type:'get'});chrome.storage.onChanged.addListener(c=>{if(c.rest){s=c.rest.newValue;render();}});}else{$('note').textContent='浏览器预览 · 安装插件后启用定时提醒';render();}setInterval(render,1000);

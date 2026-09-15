@@ -1,0 +1,270 @@
+[
+  {
+    "name": "public/assets/garden/environment.png",
+    "role": "background",
+    "ownership": "asset-owned",
+    "implementation": "regenerate",
+    "transparent": false,
+    "allowText": false,
+    "textOwnership": "none",
+    "cleanPlateRequired": true,
+    "canRegenerate": true,
+    "redrawRequired": true,
+    "redrawMode": "image-edit",
+    "scaleFactor": 1,
+    "designPixelSize1x": {
+      "width": 1536,
+      "height": 1024
+    },
+    "referenceScale": 1,
+    "sourcePixelSize": {
+      "width": 1536,
+      "height": 1024
+    },
+    "targetPixelSize": {
+      "width": 1536,
+      "height": 1024
+    },
+    "imageToolInvoked": true,
+    "sourceQuality": "intentional-soft",
+    "qualityDefects": [],
+    "requiredAction": "redraw",
+    "finalQualityVerdict": "review",
+    "qualityScaleException": "",
+    "cssAllowed": false,
+    "svgAllowed": false,
+    "geometryClass": "textured",
+    "rasterRequired": true,
+    "sourceBbox": {
+      "x": 0,
+      "y": 0,
+      "width": 1536,
+      "height": 1024
+    },
+    "preserveDetails": [
+      "原始轮廓、曲率、端点、姿态、光线方向和材质"
+    ],
+    "removeText": [
+      "所有动态界面文字"
+    ],
+    "lockedOutsideMask": false,
+    "reason": "用户授权图片工具生成独立素材",
+    "frameStrategy": "regenerate"
+  },
+  {
+    "name": "public/assets/garden/mascot.png",
+    "role": "character",
+    "ownership": "asset-owned",
+    "implementation": "regenerate",
+    "transparent": true,
+    "allowText": false,
+    "textOwnership": "none",
+    "cleanPlateRequired": true,
+    "canRegenerate": true,
+    "redrawRequired": true,
+    "redrawMode": "image-edit",
+    "scaleFactor": 1,
+    "designPixelSize1x": {
+      "width": 590,
+      "height": 635
+    },
+    "referenceScale": 1,
+    "sourcePixelSize": {
+      "width": 590,
+      "height": 635
+    },
+    "targetPixelSize": {
+      "width": 590,
+      "height": 635
+    },
+    "imageToolInvoked": true,
+    "sourceQuality": "acceptable",
+    "qualityDefects": [
+      "Generation returned RGB checkerboard, no alpha channel"
+    ],
+    "requiredAction": "redraw",
+    "finalQualityVerdict": "blocked",
+    "qualityScaleException": "",
+    "cssAllowed": false,
+    "svgAllowed": false,
+    "geometryClass": "organic",
+    "rasterRequired": true,
+    "sourceBbox": {
+      "x": 250,
+      "y": 240,
+      "width": 590,
+      "height": 635
+    },
+    "preserveDetails": [
+      "原始轮廓、曲率、端点、姿态、光线方向和材质"
+    ],
+    "removeText": [
+      "所有动态界面文字"
+    ],
+    "lockedOutsideMask": false,
+    "reason": "用户授权图片工具生成独立素材",
+    "frameStrategy": "regenerate"
+  },
+  {
+    "name": "public/assets/garden/speech.png",
+    "role": "complex-frame",
+    "ownership": "asset-owned",
+    "implementation": "regenerate",
+    "transparent": true,
+    "allowText": false,
+    "textOwnership": "none",
+    "cleanPlateRequired": true,
+    "canRegenerate": true,
+    "redrawRequired": true,
+    "redrawMode": "image-edit",
+    "scaleFactor": 1,
+    "designPixelSize1x": {
+      "width": 374,
+      "height": 134
+    },
+    "referenceScale": 1,
+    "sourcePixelSize": {
+      "width": 374,
+      "height": 134
+    },
+    "targetPixelSize": {
+      "width": 374,
+      "height": 134
+    },
+    "imageToolInvoked": true,
+    "sourceQuality": "acceptable",
+    "qualityDefects": [
+      "Generation returned RGB checkerboard, no alpha channel"
+    ],
+    "requiredAction": "redraw",
+    "finalQualityVerdict": "blocked",
+    "qualityScaleException": "",
+    "cssAllowed": false,
+    "svgAllowed": false,
+    "geometryClass": "irregular",
+    "rasterRequired": true,
+    "sourceBbox": {
+      "x": 88,
+      "y": 173,
+      "width": 374,
+      "height": 134
+    },
+    "preserveDetails": [
+      "原始轮廓、曲率、端点、姿态、光线方向和材质"
+    ],
+    "removeText": [
+      "所有动态界面文字"
+    ],
+    "lockedOutsideMask": false,
+    "reason": "用户授权图片工具生成独立素材",
+    "frameStrategy": "regenerate"
+  },
+  {
+    "name": "public/assets/garden/panel.png",
+    "role": "complex-frame",
+    "ownership": "asset-owned",
+    "implementation": "regenerate",
+    "transparent": true,
+    "allowText": false,
+    "textOwnership": "none",
+    "cleanPlateRequired": true,
+    "canRegenerate": true,
+    "redrawRequired": true,
+    "redrawMode": "image-edit",
+    "scaleFactor": 1,
+    "designPixelSize1x": {
+      "width": 605,
+      "height": 683
+    },
+    "referenceScale": 1,
+    "sourcePixelSize": {
+      "width": 605,
+      "height": 683
+    },
+    "targetPixelSize": {
+      "width": 605,
+      "height": 683
+    },
+    "imageToolInvoked": true,
+    "sourceQuality": "acceptable",
+    "qualityDefects": [
+      "Generation returned RGB checkerboard, no alpha channel"
+    ],
+    "requiredAction": "redraw",
+    "finalQualityVerdict": "blocked",
+    "qualityScaleException": "",
+    "cssAllowed": false,
+    "svgAllowed": false,
+    "geometryClass": "textured",
+    "rasterRequired": true,
+    "sourceBbox": {
+      "x": 880,
+      "y": 110,
+      "width": 605,
+      "height": 683
+    },
+    "preserveDetails": [
+      "原始轮廓、曲率、端点、姿态、光线方向和材质"
+    ],
+    "removeText": [
+      "所有动态界面文字"
+    ],
+    "lockedOutsideMask": false,
+    "reason": "用户授权图片工具生成独立素材",
+    "frameStrategy": "regenerate"
+  },
+  {
+    "name": "public/assets/garden/sparkles.png",
+    "role": "decoration",
+    "ownership": "asset-owned",
+    "implementation": "regenerate",
+    "transparent": true,
+    "allowText": false,
+    "textOwnership": "none",
+    "cleanPlateRequired": true,
+    "canRegenerate": true,
+    "redrawRequired": true,
+    "redrawMode": "image-edit",
+    "scaleFactor": 1,
+    "designPixelSize1x": {
+      "width": 625,
+      "height": 467
+    },
+    "referenceScale": 1,
+    "sourcePixelSize": {
+      "width": 625,
+      "height": 467
+    },
+    "targetPixelSize": {
+      "width": 625,
+      "height": 467
+    },
+    "imageToolInvoked": false,
+    "sourceQuality": "acceptable",
+    "qualityDefects": [
+      "Deferred until transparent-output capability is available"
+    ],
+    "requiredAction": "redraw",
+    "finalQualityVerdict": "blocked",
+    "qualityScaleException": "",
+    "cssAllowed": false,
+    "svgAllowed": false,
+    "geometryClass": "hand-drawn",
+    "rasterRequired": true,
+    "sourceBbox": {
+      "x": 243,
+      "y": 185,
+      "width": 625,
+      "height": 467
+    },
+    "preserveDetails": [
+      "原始轮廓、曲率、端点、姿态、光线方向和材质"
+    ],
+    "removeText": [
+      "所有动态界面文字"
+    ],
+    "lockedOutsideMask": false,
+    "reason": "用户授权图片工具生成独立素材",
+    "frameStrategy": "regenerate"
+  }
+]

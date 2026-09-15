@@ -1,0 +1,14 @@
+{
+  "workflowMode": "mandatory-redraw",
+  "scope": [
+    "wings",
+    "updown",
+    "twist"
+  ],
+  "cause": "313.5px / 443.5px sprite cells enlarged to 750 CSS px at 1440 viewport",
+  "targetCell": [
+    887,
+    887
+  ],
+  "reference": "/var/folders/3c/8gvszx7x07v19jdhtzlgjzj40000gn/T/codex-clipboard-e59c43c1-fa9b-44bc-99b5-01194a6aa799.png"
+}

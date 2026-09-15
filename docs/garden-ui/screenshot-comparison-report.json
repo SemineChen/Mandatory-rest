@@ -1,0 +1,23 @@
+{
+  "verdict": "fail",
+  "correctionRounds": 1,
+  "states": [
+    {
+      "name": "exercise-waiting",
+      "applicable": true,
+      "viewport": {
+        "width": 1536,
+        "height": 1024
+      },
+      "reference": "artifacts/ui-reference/reference.png",
+      "rendered": "artifacts/garden-ui/exercise-waiting.png",
+      "diff": "artifacts/garden-ui/diff.png",
+      "verdict": "fail",
+      "notes": "Corrected camera y333.39 to y326.09 and progress y753.39 to y741.09; missing visual assets remain."
+    }
+  ],
+  "assetComparisons": [],
+  "issues": [
+    "Missing transparent assets; pixel fidelity not passed"
+  ]
+}

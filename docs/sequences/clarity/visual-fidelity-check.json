@@ -1,0 +1,67 @@
+{
+  "scope": [
+    "clarity",
+    "per-frame body registration",
+    "fur exposure and color consistency"
+  ],
+  "rootCauses": [
+    "Individual redraws varied in torso proportions and fur tone",
+    "Player scaled complete silhouettes including moving arms"
+  ],
+  "perAction": [
+    {
+      "mode": "wings",
+      "before": {
+        "heightVariation": 9.764309764309775,
+        "brightnessVariation": 3.5549692474294625,
+        "widthVariation": 10.696517412935314
+      },
+      "after": {
+        "heightVariation": 0.16181229773462036,
+        "brightnessVariation": 0.29567142295972015,
+        "widthVariation": 0.7194244604316502
+      }
+    },
+    {
+      "mode": "updown",
+      "before": {
+        "heightVariation": 5.813953488372103,
+        "brightnessVariation": 5.242707324240969,
+        "widthVariation": 10.025062656641603
+      },
+      "after": {
+        "heightVariation": 0.16181229773462036,
+        "brightnessVariation": 0.14322798320416386,
+        "widthVariation": 0.4784688995215225
+      }
+    },
+    {
+      "mode": "twist",
+      "before": {
+        "heightVariation": 12.248628884826317,
+        "brightnessVariation": 9.483654666755914,
+        "widthVariation": 16.18798955613576
+      },
+      "after": {
+        "heightVariation": 0.4862236628849326,
+        "brightnessVariation": 0.3866810453406755,
+        "widthVariation": 4.176904176904173
+      }
+    }
+  ],
+  "verification": {
+    "unitTests": 33,
+    "desktopAndMobileCycles": 6,
+    "sourceCell": [
+      887,
+      887
+    ],
+    "realAlpha": true,
+    "pageErrors": 0
+  },
+  "limitations": [
+    "Fine fur texture and some small facial details still vary between independently redrawn frames.",
+    "Torso twist keeps the original view-dependent width changes; uniform width is only required for the two frontal actions."
+  ],
+  "review": "artifacts/sequence-consistency/frame-review.html"
+}

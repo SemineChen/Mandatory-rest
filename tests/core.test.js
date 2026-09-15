@@ -14,21 +14,21 @@ function pose(kind='down') {
  return p;
 }
 function driver(c){let t=0;return kind=>{for(let i=0;i<8;i++){c.update(kind===null?null:pose(kind),t);t+=100;}};}
-test('three actions require 50 complete cycles each with transitions',()=>{
+test('three actions require 10 complete cycles each with transitions',()=>{
  const c=new PoseCounter(),hold=driver(c);
  for(const [stage,cycle] of [[0,['open','down']],[1,['leftUp','rightUp']],[2,['left','right','down']]]){
   assert.equal(c.stage,stage);
-  for(let n=0;n<50;n++){for(const kind of cycle)hold(kind);assert.equal(c.reps,n+1);}
-  if(c.stage<2){assert.equal(c.transitioning,true);hold(cycle[0]);assert.equal(c.reps,50);for(let n=0;n<4;n++)hold('down');assert.equal(c.reps,0);}
+  for(let n=0;n<10;n++){for(const kind of cycle)hold(kind);assert.equal(c.reps,n+1);}
+  if(c.stage<2){assert.equal(c.transitioning,true);hold(cycle[0]);assert.equal(c.reps,10);for(let n=0;n<4;n++)hold('down');assert.equal(c.reps,0);}
  }
- assert.equal(c.stage,3);assert.equal(c.reps,50);
+ assert.equal(c.stage,3);assert.equal(c.reps,10);
 });
 test('holding a pose and losing tracking cannot complete repetitions',()=>{
  const c=new PoseCounter(),hold=driver(c);hold('open');hold('open');assert.equal(c.reps,0);hold(null);hold('down');assert.equal(c.reps,0);hold('open');hold('down');assert.equal(c.reps,1);
 });
 test('reload preserves counts but discards partial movement',()=>{
- const c=new PoseCounter({stage:1,reps:49}),hold=driver(c);hold('rightUp');assert.equal(c.reps,49);hold('leftUp');hold('rightUp');assert.equal(c.reps,50);assert.equal(c.transitioning,true);
- const restored=new PoseCounter({stage:1,reps:50});assert.equal(restored.transitioning,true);
+ const c=new PoseCounter({stage:1,reps:9}),hold=driver(c);hold('rightUp');assert.equal(c.reps,9);hold('leftUp');hold('rightUp');assert.equal(c.reps,10);assert.equal(c.transitioning,true);
+ const restored=new PoseCounter({stage:1,reps:10});assert.equal(restored.transitioning,true);
 });
 test('paused and hidden intervals discard unfinished movement',()=>{
  const c=new PoseCounter(),hold=driver(c);hold('open');c.resetTracking();hold('down');assert.equal(c.reps,0);

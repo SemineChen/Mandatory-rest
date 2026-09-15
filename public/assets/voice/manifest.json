@@ -1,0 +1,35 @@
+{
+  "source": "歇一会语音包.mp3",
+  "cues": [
+    {
+      "file": "wings.m4a",
+      "sourceStart": 0,
+      "sourceEnd": 6.11
+    },
+    {
+      "file": "next-updown.m4a",
+      "sourceStart": 6.11,
+      "sourceEnd": 8.11
+    },
+    {
+      "file": "updown.m4a",
+      "sourceStart": 8.11,
+      "sourceEnd": 14.47
+    },
+    {
+      "file": "next-twist.m4a",
+      "sourceStart": 14.47,
+      "sourceEnd": 16.51
+    },
+    {
+      "file": "twist.m4a",
+      "sourceStart": 16.51,
+      "sourceEnd": 23.66
+    },
+    {
+      "file": "complete.m4a",
+      "sourceStart": 23.66,
+      "sourceEnd": 27.533061224489796
+    }
+  ]
+}

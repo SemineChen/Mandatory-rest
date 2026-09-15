@@ -1,0 +1,26 @@
+{
+  "verdict": "fail",
+  "checks": [
+    {
+      "id": "no-full-reference-background",
+      "applicable": true,
+      "verdict": "pass",
+      "evidence": [
+        "public/garden.css"
+      ],
+      "notes": "Only environmental clean plate used."
+    },
+    {
+      "id": "complex-glass-material",
+      "applicable": true,
+      "verdict": "fail",
+      "evidence": [
+        "public/garden.css"
+      ],
+      "notes": "Provisional CSS glass retained pending a valid transparent material asset."
+    }
+  ],
+  "issues": [
+    "Provisional glass and 3D fallback do not meet final reference fidelity requirements"
+  ]
+}

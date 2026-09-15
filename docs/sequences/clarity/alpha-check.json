@@ -1,0 +1,162 @@
+[
+  {
+    "path": "public/assets/sequences/wings-pair-hq-0.png",
+    "width": 1774,
+    "height": 887,
+    "transparent": 901794,
+    "opaque": 669303,
+    "magenta": 0
+  },
+  {
+    "path": "public/assets/sequences/wings-pair-hq-1.png",
+    "width": 1774,
+    "height": 887,
+    "transparent": 979689,
+    "opaque": 591619,
+    "magenta": 0
+  },
+  {
+    "path": "public/assets/sequences/wings-pair-hq-2.png",
+    "width": 1774,
+    "height": 887,
+    "transparent": 918536,
+    "opaque": 652529,
+    "magenta": 0
+  },
+  {
+    "path": "public/assets/sequences/wings-pair-hq-3.png",
+    "width": 1774,
+    "height": 887,
+    "transparent": 908874,
+    "opaque": 662068,
+    "magenta": 0
+  },
+  {
+    "path": "public/assets/sequences/wings-pair-hq-4.png",
+    "width": 1774,
+    "height": 887,
+    "transparent": 916760,
+    "opaque": 654396,
+    "magenta": 0
+  },
+  {
+    "path": "public/assets/sequences/wings-pair-hq-5.png",
+    "width": 1774,
+    "height": 887,
+    "transparent": 963238,
+    "opaque": 608160,
+    "magenta": 0
+  },
+  {
+    "path": "public/assets/sequences/wings-pair-hq-6.png",
+    "width": 1774,
+    "height": 887,
+    "transparent": 918548,
+    "opaque": 652848,
+    "magenta": 0
+  },
+  {
+    "path": "public/assets/sequences/wings-pair-hq-7.png",
+    "width": 1774,
+    "height": 887,
+    "transparent": 964424,
+    "opaque": 606965,
+    "magenta": 0
+  },
+  {
+    "path": "public/assets/sequences/updown-pair-hq-0.png",
+    "width": 1774,
+    "height": 887,
+    "transparent": 906720,
+    "opaque": 664498,
+    "magenta": 0
+  },
+  {
+    "path": "public/assets/sequences/updown-pair-hq-1.png",
+    "width": 1774,
+    "height": 887,
+    "transparent": 958142,
+    "opaque": 612982,
+    "magenta": 0
+  },
+  {
+    "path": "public/assets/sequences/updown-pair-hq-2.png",
+    "width": 1774,
+    "height": 887,
+    "transparent": 912686,
+    "opaque": 658567,
+    "magenta": 0
+  },
+  {
+    "path": "public/assets/sequences/updown-pair-hq-3.png",
+    "width": 1774,
+    "height": 887,
+    "transparent": 983661,
+    "opaque": 587673,
+    "magenta": 0
+  },
+  {
+    "path": "public/assets/sequences/twist-pair-hq-0.png",
+    "width": 1774,
+    "height": 887,
+    "transparent": 993512,
+    "opaque": 577743,
+    "magenta": 0
+  },
+  {
+    "path": "public/assets/sequences/twist-pair-hq-1.png",
+    "width": 1774,
+    "height": 887,
+    "transparent": 958291,
+    "opaque": 612869,
+    "magenta": 0
+  },
+  {
+    "path": "public/assets/sequences/twist-pair-hq-2.png",
+    "width": 1774,
+    "height": 887,
+    "transparent": 969201,
+    "opaque": 601876,
+    "magenta": 0
+  },
+  {
+    "path": "public/assets/sequences/twist-pair-hq-3.png",
+    "width": 1774,
+    "height": 887,
+    "transparent": 1020643,
+    "opaque": 551027,
+    "magenta": 0
+  },
+  {
+    "path": "public/assets/sequences/twist-pair-hq-4.png",
+    "width": 1774,
+    "height": 887,
+    "transparent": 935228,
+    "opaque": 636022,
+    "magenta": 0
+  },
+  {
+    "path": "public/assets/sequences/twist-pair-hq-5.png",
+    "width": 1774,
+    "height": 887,
+    "transparent": 952245,
+    "opaque": 618895,
+    "magenta": 0
+  },
+  {
+    "path": "public/assets/sequences/twist-pair-hq-6.png",
+    "width": 1774,
+    "height": 887,
+    "transparent": 941592,
+    "opaque": 629591,
+    "magenta": 0
+  },
+  {
+    "path": "public/assets/sequences/twist-pair-hq-7.png",
+    "width": 1774,
+    "height": 887,
+    "transparent": 990215,
+    "opaque": 580968,
+    "magenta": 0
+  }
+]

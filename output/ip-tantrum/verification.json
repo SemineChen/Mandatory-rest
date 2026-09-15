@@ -1,0 +1,10 @@
+{
+  "width": 512,
+  "height": 512,
+  "fps": 30,
+  "frames": 120,
+  "duration_seconds": 4,
+  "decoded_every_frame": true,
+  "loop_boundary_exact_before_encoding": true,
+  "method": "continuous 2D puppet deformation of approved key pose; large-pose transitions excluded due to ghosting"
+}

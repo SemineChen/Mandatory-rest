@@ -4,8 +4,8 @@ import {createRepDing, repAdvanced} from '../src/ding.js';
 
 test('rep ding only triggers when a repetition is added',()=>{
  assert.equal(repAdvanced({stage:0,reps:1},{stage:0,reps:2}),true);
- assert.equal(repAdvanced({stage:2,reps:49},{stage:3,reps:50}),true);
- assert.equal(repAdvanced({stage:0,reps:50},{stage:1,reps:0}),false);
+ assert.equal(repAdvanced({stage:2,reps:9},{stage:3,reps:10}),true);
+ assert.equal(repAdvanced({stage:0,reps:10},{stage:1,reps:0}),false);
  assert.equal(repAdvanced({stage:0,reps:5},{stage:0,reps:5}),false);
 });
 
@@ -29,7 +29,7 @@ test('audio context plays one short beep per counted repetition',()=>{
  }
  const ding=createRepDing({AudioContext:FakeContext});
  ding.playForChange({stage:0,reps:1},{stage:0,reps:2});
- ding.playForChange({stage:0,reps:50},{stage:1,reps:0});
+ ding.playForChange({stage:0,reps:10},{stage:1,reps:0});
  assert.equal(events.filter(([name])=>name==='start').length,1);
  assert.equal(events.filter(([name])=>name==='stop').length,1);
 });

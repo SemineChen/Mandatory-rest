@@ -5,3 +5,7 @@ artifacts/
 *.zip
 歇一会-Chrome插件/
 歇一会-Chrome插件 2/
+
+# Generated standalone deployment copy and archive
+output/rest-web/
+output/rest-web.tar.gz

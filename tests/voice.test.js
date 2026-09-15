@@ -2,27 +2,23 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {createVoiceGuide} from '../src/voice.js';
 function setup(){
- const spoken=[];let cancelled=0;
- const voice={lang:'zh-CN',localService:true};
- const synth={getVoices:()=>[voice],cancel:()=>cancelled++,speak:u=>spoken.push(u)};
- const guide=createVoiceGuide(synth,class{constructor(text){this.text=text;}});
- return {guide,spoken,voice,get cancelled(){return cancelled;}};
+ const clips=[];let warnings=0;
+ const guide=createVoiceGuide({createAudio:src=>{const a={src,currentTime:2,paused:false,play(){return new Promise((resolve,reject)=>{this.reject=reject;});},pause(){this.paused=true;}};clips.push(a);return a;},onUnavailable:()=>warnings++});
+ return {guide,clips,get warnings(){return warnings;}};
 }
-test('announces each action once, including its name and target',()=>{
- const {guide,spoken,voice}=setup();
- guide.announce({stage:0});guide.announce({stage:0,reps:1});guide.announce({stage:0,reps:2});
- assert.equal(spoken.length,1);assert.match(spoken[0].text,/大鹏展翅.*50/);assert.equal(spoken[0].voice,voice);
- guide.announce({stage:1});assert.match(spoken[1].text,/上下齐发.*50/);
- guide.announce({stage:2});assert.match(spoken[2].text,/扭转乾坤.*50/);
+test('plays each recorded cue once and interrupts the previous cue',()=>{
+ const s=setup();
+ const states=[{stage:0},{stage:0,transitioning:true},{stage:1},{stage:1,transitioning:true},{stage:2},{stage:3}];
+ const names=['wings','next-updown','updown','next-twist','twist','complete'];
+ states.forEach((state,i)=>{s.guide.announce(state);s.guide.announce({...state,reps:2});assert.equal(s.clips.length,i+1);assert.equal(s.clips[i].src,`assets/voice/${names[i]}.m4a`);if(i)assert.equal(s.clips[i-1].paused,true);});
 });
-test('transition, completion and resumed action have distinct announcements',()=>{
- const s=setup();s.guide.announce({stage:0,transitioning:true});s.guide.announce({stage:0,transitioning:true});
- assert.equal(s.spoken.length,1);assert.equal(s.spoken[0].text,'接下来，上下齐发。');
- s.guide.announce({stage:1});s.guide.stop();s.guide.announce({stage:1});
- assert.equal(s.spoken.length,3);s.guide.announce({stage:3});assert.match(s.spoken.at(-1).text,/150/);
- assert.ok(s.cancelled>0);
+test('stop silences playback and allows the same action to restart',()=>{
+ const s=setup();s.guide.announce({stage:0});s.guide.stop();assert.equal(s.clips[0].paused,true);assert.equal(s.clips[0].currentTime,0);s.guide.announce({stage:0});assert.equal(s.clips.length,2);
 });
-test('unsupported speech leaves counting available and reports unavailability',()=>{
- let warned=false;const guide=createVoiceGuide(null,null,()=>warned=true);
- assert.doesNotThrow(()=>guide.announce({stage:0}));assert.equal(warned,true);
+test('ignores interrupted playback errors but reports a current failure once',async()=>{
+ const s=setup();s.guide.announce({stage:0});const oldError=s.clips[0].onerror;s.guide.announce({stage:1});s.clips[0].reject(Error('interrupted'));oldError();await Promise.resolve();assert.equal(s.warnings,0);
+ s.clips[1].onerror();s.clips[1].reject(Error('decode'));await Promise.resolve();assert.equal(s.warnings,1);
+});
+test('unavailable audio reports failure without throwing',()=>{
+ let warnings=0;const g=createVoiceGuide({createAudio:()=>{throw Error('unavailable');},onUnavailable:()=>warnings++});assert.doesNotThrow(()=>g.announce({stage:0}));assert.equal(warnings,1);
 });

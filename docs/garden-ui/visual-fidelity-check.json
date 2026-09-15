@@ -1,0 +1,55 @@
+{
+  "verdict": "fail",
+  "referenceStateCoverage": 1,
+  "criticalRegionPassRate": 0.5,
+  "tolerances": {
+    "anchorPx": 2,
+    "bboxPx": 2
+  },
+  "states": [
+    {
+      "name": "exercise-waiting",
+      "reference": "artifacts/ui-reference/reference.png",
+      "rendered": "artifacts/garden-ui/exercise-waiting.png",
+      "overlay": "artifacts/garden-ui/overlay.png",
+      "diff": "artifacts/garden-ui/diff.png",
+      "criticalRegions": [
+        {
+          "id": "panel-layout",
+          "verdict": "pass",
+          "evidence": "artifacts/garden-ui/measurements.json"
+        },
+        {
+          "id": "camera-layout",
+          "verdict": "pass",
+          "evidence": "artifacts/garden-ui/measurements.json"
+        },
+        {
+          "id": "character-and-speech",
+          "verdict": "fail",
+          "evidence": "artifacts/garden-ui/exercise-waiting.png"
+        },
+        {
+          "id": "environment-material",
+          "verdict": "fail",
+          "evidence": "artifacts/garden-ui/exercise-waiting.png"
+        }
+      ],
+      "layoutVerdict": "review",
+      "typographyVerdict": "review",
+      "colorMaterialVerdict": "fail",
+      "layeringVerdict": "review",
+      "assetIdentityVerdict": "fail",
+      "visualVerdict": "fail"
+    }
+  ],
+  "explainedDifferences": [
+    "Camera content comes from the live device; screenshot uses unavailable-camera fallback."
+  ],
+  "unexplainedDifferences": [
+    "Temporary 3D mascot differs from reference",
+    "Transparent speech plate and sparkles missing",
+    "Regenerated environment differs from reference",
+    "Glass material requires approved asset"
+  ]
+}

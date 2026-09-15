@@ -1,0 +1,87 @@
+[
+  {
+    "name": "seated",
+    "path": "assets/sequences/seated.png",
+    "source": "/Users/chenyueping/.codex/generated_images/01a084f1-9e98-7182-ba1d-ba10e11d9158/exec-9f5c3354-4fcd-442a-9265-d279397d298d.png",
+    "width": 1463,
+    "height": 1075,
+    "columns": 4,
+    "rows": 4,
+    "frames": 16,
+    "fps": 6,
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "newPixelsGenerated": true,
+    "resizeWasPrimaryMethod": false
+  },
+  {
+    "name": "wings",
+    "path": "assets/sequences/wings.png",
+    "source": "/Users/chenyueping/.codex/generated_images/01a084f1-9e98-7182-ba1d-ba10e11d9158/exec-c9704964-b450-4553-a2e2-181f507f409f.png",
+    "width": 1254,
+    "height": 1254,
+    "columns": 4,
+    "rows": 4,
+    "frames": 16,
+    "fps": 8,
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "newPixelsGenerated": true,
+    "resizeWasPrimaryMethod": false
+  },
+  {
+    "name": "updown",
+    "path": "assets/sequences/updown.png",
+    "source": "/Users/chenyueping/.codex/generated_images/01a084f1-9e98-7182-ba1d-ba10e11d9158/exec-b433f753-f09a-4613-97d4-a6cf632c342a.png",
+    "width": 1254,
+    "height": 1254,
+    "columns": 4,
+    "rows": 4,
+    "frames": 16,
+    "fps": 8,
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "newPixelsGenerated": true,
+    "resizeWasPrimaryMethod": false
+  },
+  {
+    "name": "twist",
+    "path": "assets/sequences/twist.png",
+    "source": "/Users/chenyueping/.codex/generated_images/01a084f1-9e98-7182-ba1d-ba10e11d9158/exec-82b7aefa-72a3-4486-b027-0c543c15d44e.png",
+    "width": 1254,
+    "height": 1254,
+    "columns": 4,
+    "rows": 4,
+    "frames": 16,
+    "fps": 8,
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "newPixelsGenerated": true,
+    "resizeWasPrimaryMethod": false
+  },
+  {
+    "name": "speech",
+    "path": "assets/sequences/speech.png",
+    "source": "/Users/chenyueping/.codex/generated_images/01a084f1-9e98-7182-ba1d-ba10e11d9158/exec-fb678c0d-96b6-4fc1-932f-19b89b3c7b94.png",
+    "width": 1983,
+    "height": 793,
+    "columns": 1,
+    "rows": 1,
+    "frames": 1,
+    "fps": 8,
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "newPixelsGenerated": true,
+    "resizeWasPrimaryMethod": false
+  }
+]

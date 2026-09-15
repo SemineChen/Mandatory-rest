@@ -1,0 +1,79 @@
+{
+  "stack": "Vanilla JS/CSS MV3",
+  "referenceCoordinateSystem": {
+    "width": 1536,
+    "height": 1024
+  },
+  "phases": [
+    {
+      "id": "assets",
+      "dependsOn": [],
+      "outputs": [
+        "public/assets/garden/environment.png",
+        "public/assets/garden/mascot.png",
+        "public/assets/garden/speech.png",
+        "public/assets/garden/panel.png",
+        "public/assets/garden/sparkles.png"
+      ],
+      "doneWhen": [
+        "true alpha and no UI text verified"
+      ]
+    },
+    {
+      "id": "assemble",
+      "dependsOn": [
+        "assets"
+      ],
+      "outputs": [
+        "public/break.html",
+        "public/style.css",
+        "src/mascot-media.js"
+      ],
+      "doneWhen": [
+        "reference viewport alignment and existing behavior verified"
+      ]
+    },
+    {
+      "id": "verify",
+      "dependsOn": [
+        "assemble"
+      ],
+      "outputs": [
+        "screenshots and comparison reports"
+      ],
+      "doneWhen": [
+        "build, existing tests and extension smoke pass"
+      ]
+    }
+  ],
+  "states": [
+    {
+      "name": "welcome",
+      "applicable": true,
+      "source": "reference or existing reachable workflow"
+    },
+    {
+      "name": "exercise-waiting",
+      "applicable": true,
+      "source": "reference or existing reachable workflow"
+    },
+    {
+      "name": "camera-error",
+      "applicable": true,
+      "source": "reference or existing reachable workflow"
+    },
+    {
+      "name": "paused",
+      "applicable": true,
+      "source": "reference or existing reachable workflow"
+    },
+    {
+      "name": "done",
+      "applicable": true,
+      "source": "reference or existing reachable workflow"
+    }
+  ],
+  "manualReview": [
+    "Generated asset identity and exact outline differences"
+  ]
+}

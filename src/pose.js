@@ -1,9 +1,10 @@
 import {MotionCounter} from './motion.js';
 import {ACTIONS} from './flow.js';
-export const TARGET=50;
+export const TARGET=10;
 export class PoseCounter {
  constructor(saved={}) {
-  this.stage=saved.stage||0;this.reps=saved.reps||0;
+  this.stage=saved.stage||0;this.reps=Math.min(TARGET,Math.max(0,saved.reps||0));
+  if(this.stage===2&&this.reps===TARGET)this.stage=3;
   this.motion=new MotionCounter(ACTIONS[this.stage]?.id||'wings');
   this.visible=false;this.partial=false;this.hold=0;this.transitionAt=null;this.remaining=3;
  }

@@ -1,0 +1,52 @@
+{
+  "sources": [
+    "artifacts/ui-reference/reference.png"
+  ],
+  "referenceCanvas": {
+    "width": 1536,
+    "height": 1024
+  },
+  "referenceViewport": {
+    "width": 1536,
+    "height": 1024
+  },
+  "targetStack": "Existing vanilla JS Chrome MV3 extension",
+  "workflowMode": "mandatory-redraw",
+  "redrawScope": [
+    "public/assets/garden/environment.png",
+    "public/assets/garden/mascot.png",
+    "public/assets/garden/speech.png",
+    "public/assets/garden/panel.png",
+    "public/assets/garden/sparkles.png"
+  ],
+  "statesVisible": [
+    "exercise-waiting"
+  ],
+  "statesRequired": [
+    "welcome",
+    "exercise-waiting",
+    "camera-error",
+    "paused",
+    "done"
+  ],
+  "breakpointsRequired": [
+    1536,
+    1440,
+    390
+  ],
+  "availableAssets": [
+    "public/assets/mascot.glb"
+  ],
+  "availableImageTools": [
+    "image_gen.imagegen"
+  ],
+  "constraints": [
+    "Reuse local pose recognition and counters",
+    "Static IP fallback and configurable video per state",
+    "No full UI screenshot as background"
+  ],
+  "uncertainties": [
+    "Generated assets may differ from exact reference pixels",
+    "Transparent generation currently returns RGB checkerboard; retry pending"
+  ]
+}

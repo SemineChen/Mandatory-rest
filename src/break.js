@@ -1,32 +1,37 @@
-import {createMascot} from './mascot.js';
+import {createSequence} from './sequence.js';
+import {createMascotMedia} from './mascot-media.js';
 import {PoseCounter} from './pose.js';
 import {ACTIONS} from './flow.js';
 import {createVoiceGuide} from './voice.js';
 import {createRepDing} from './ding.js';
 const $=id=>document.getElementById(id),extension=!!globalThis.chrome?.runtime?.id;
-const voice=createVoiceGuide(undefined,undefined,()=>{$('voice-status').hidden=false;});
+const voice=createVoiceGuide({onUnavailable:()=>{$('voice-status').hidden=false;}});
 const ding=createRepDing();
 const send=async m=>{if(!extension)return null;const r=await chrome.runtime.sendMessage(m);if(r?.error)throw Error(r.error);return r;};
 let mascot,counter=new PoseCounter(),session=null,stream,detector,frameId,generation=0,running=false,finished=false,lastVideo=-1,lastInference=0,busy=false,workerReadyReject=null;
-createMascot($('mascot')).then(m=>mascot=m).catch(e=>{$('model-error').hidden=false;console.error(e);});
+const mascotMedia=createMascotMedia($('mascot-video'),$('mascot-fallback'));
+let mascotModel;
+mascot={setMode(mode){mascotMedia.setMode(mode);mascotModel?.setMode(mode);}};
+mascotModel=createSequence($('mascot'));
+$('mascot').addEventListener('sequence-error',()=>{$('model-error').hidden=false;});
 function setView(view){document.body.dataset.view=view;}
-let backdropGeneration=0;
-function clearBackdrop(){backdropGeneration++;$('work-snapshot').removeAttribute('src');$('work-snapshot').hidden=true;}
-async function loadBackdrop(){
- const request=++backdropGeneration;
- if(!extension){$('preview-workspace').src='demo-workspace.html';$('preview-workspace').hidden=false;$('preview-label').hidden=false;$('background-empty').hidden=true;return;}
- const {image}=await send({type:'backdrop'});if(request!==backdropGeneration)return;const img=$('work-snapshot');img.hidden=!image;$('background-empty').hidden=!!image;if(image)img.src=image;else img.removeAttribute('src');
-}
-loadBackdrop().catch(console.warn);
+let soundEnabled=true;
+$('sound-toggle').onclick=()=>{soundEnabled=!soundEnabled;voice.stop();$('sound-toggle').textContent=soundEnabled?'声音：开':'声音：关';$('sound-toggle').setAttribute('aria-pressed',String(soundEnabled));};
+// In-page mode is transparent: the underlying browser page stays mounted and live.
+const embedded=window.parent!==window;
+document.documentElement.dataset.surface=embedded?'overlay':'standalone';
 
-async function init(){if(extension){session=await send({type:'get'});counter=new PoseCounter(session);if(!session.active){$('start').textContent='开始一组休息 ↗';}else if(session.stage===3){await complete();}}}
+function saveLocalProgress(){if(extension)return;try{sessionStorage.setItem('rest-progress',JSON.stringify({stage:counter.stage,reps:counter.reps}));}catch{}}
+function clearLocalProgress(){if(extension)return;try{sessionStorage.removeItem('rest-progress');}catch{}}
+async function init(){if(!extension){try{const saved=JSON.parse(sessionStorage.getItem('rest-progress')||'null');if(saved&&Number.isInteger(saved.stage)&&saved.stage>=0&&saved.stage<3&&Number.isInteger(saved.reps)&&saved.reps>=0&&saved.reps<=50){counter=new PoseCounter(saved);$('start').textContent=`继续休息 · 第 ${saved.stage+1} 组`;if(counter.stage===3)await complete();}else if(saved?.stage===3){counter=new PoseCounter(saved);await complete();}}catch{}}if(extension){session=await send({type:'get'});counter=new PoseCounter(session);if(!session.active){$('start').textContent='开始一组休息 ↗';}else if(session.stage===3){await complete();}}}
 init().catch(showError);
 function stopCamera(){voice.stop();counter.resetTracking();generation++;running=false;cancelAnimationFrame(frameId);stream?.getTracks().forEach(t=>t.stop());stream=null;$('video').srcObject=null;workerReadyReject?.(new DOMException('Cancelled','AbortError'));workerReadyReject=null;detector?.terminate();detector=null;busy=false;}
-function showError(e){setView('exercise');document.body.dataset.tracking='unclear';stopCamera();$('retry').hidden=false;$('camera-placeholder').hidden=false;$('camera-placeholder').textContent='摄像头暂时不可用';$('feedback').textContent='进度已保留';$('hint').textContent=e.name==='NotAllowedError'?'请允许摄像头权限，然后重试。':e.name==='NotFoundError'?'没有找到摄像头，请连接设备后重试。':'未能启动识别，请检查摄像头或重新尝试。';mascot?.setMode('confused');console.error(e);}
+function showError(e){document.body.dataset.cameraError='true';setView('exercise');document.body.dataset.tracking='unclear';stopCamera();$('retry').hidden=false;$('camera-placeholder').hidden=false;$('camera-placeholder').textContent='摄像头暂时不可用';$('status').textContent='◌ 等待摄像头';$('feedback').textContent='进度已保留';$('hint').textContent=e.name==='NotAllowedError'?'请允许摄像头权限，然后重试。':e.name==='NotFoundError'?'没有找到摄像头，请连接设备后重试。':'未能启动识别，请检查摄像头或重新尝试。';mascot?.setMode(ACTIONS[counter.stage]?.id||'idle');console.error(e);}
 async function start(){
  if(running)return;
+ delete document.body.dataset.cameraError;
  setView('exercise');document.body.dataset.tracking='pending';$('start').disabled=true;$('welcome').hidden=true;$('exercise').hidden=false;$('retry').hidden=true;
- $('voice-status').hidden=true;voice.announce(counter);ding.unlock();
+ $('voice-status').hidden=true;render();if(soundEnabled)voice.announce(counter);ding.unlock();
  try{
   if(extension&&!session?.active){session=await send({type:'start'});counter=new PoseCounter(session);}
   setView('exercise');$('welcome').hidden=true;$('exercise').hidden=false;const token=++generation;
@@ -81,7 +86,8 @@ async function receive(data,token){
   const before=`${beforeState.stage}-${beforeState.reps}`;
   counter.update(data.points,data.time);draw(data.points);render();
   if(before!==`${counter.stage}-${counter.reps}`){
-   ding.playForChange(beforeState,{stage:counter.stage,reps:counter.reps});
+   saveLocalProgress();
+   if(soundEnabled)ding.playForChange(beforeState,{stage:counter.stage,reps:counter.reps});
    await send({type:'progress',stage:counter.stage,reps:counter.reps,sessionId:session?.sessionId});
    if(token!==generation)return;
    if(counter.stage===3)await complete();
@@ -93,43 +99,43 @@ function render(){
  const stage=counter.stage,action=ACTIONS[stage];
  if(!action)return;
  const switching=counter.transitioning,next=ACTIONS[stage+1];
- voice.announce(counter);
+ if(soundEnabled)voice.announce(counter);
  document.body.dataset.tracking=counter.visible||switching?'visible':'unclear';
  $('header-stage').textContent=`第 ${stage+1} 组 / ${action.name}`;
- $('next-action').textContent=next?`${next.name} × 50`:'完成后返回工作';
+ $('next-action').textContent=next?`${next.name} × 10`:'完成后返回工作';
  $('action-title').textContent=switching?'这一组完成了':action.name;
  $('step-label').textContent=`${stage+1} / 3`;
  $('instruction').textContent=switching?`${counter.remaining} 秒后开始：${next.name}`:action.instruction;
- $('count').textContent=counter.reps;$('total').textContent=' / 50';
- $('hold').style.width=`${counter.reps*2}%`;
+ $('count').textContent=counter.reps;$('total').textContent=' / 10';
+ $('hold').style.width=`${counter.reps*10}%`;
  $('status').textContent=switching?'✓ 换个动作':counter.visible?'● 正在计数':'◌ 等待入镜';
  $('feedback').textContent=switching?'放松一下，准备下一组':!counter.visible?(stage===2?'双肩入镜':'肩膀和一侧手肘入镜'):action.rule;
  $('hint').textContent=switching?next.rule:!counter.visible?'暂时看不清 · 次数保留':counter.partial?'可见手臂计数 · 连贯做':'实时计数 · 不用停住';
  $('speech').textContent=switching?`接下来，${next.name}`:!counter.visible?'调整一下，我在等你':`一起做${action.name}`;
- mascot?.setMode(switching?'idle':!counter.visible?'confused':['open','updown','twist'][stage]);
+ mascot?.setMode((switching?next:action).id);
 }
 async function complete(){
  stopCamera();if(finished)return;
  if(extension){const r=await send({type:'complete',sessionId:session?.sessionId});if(r.active)throw Error('Completion not accepted');session=r;}
- finished=true;setView('done');document.body.dataset.tracking='visible';$('header-stage').textContent='3 组 / 150 次完成';$('exercise').hidden=true;$('welcome').hidden=true;$('done').hidden=false;$('status').textContent='✓ 休息完成';$('step-label').textContent='3 / 3';$('speech').textContent='好啦，电脑还给你';$('lock-note').textContent='✓ 网页已恢复 · 摄像头已关闭';mascot?.setMode('celebrate');voice.announce({stage:3});
+ finished=true;saveLocalProgress();setView('done');document.body.dataset.tracking='visible';$('header-stage').textContent='3 组 / 30 次完成';$('exercise').hidden=true;$('welcome').hidden=true;$('done').hidden=false;$('status').textContent='✓ 休息完成';$('step-label').textContent='3 / 3';$('speech').textContent='好啦，电脑还给你';$('lock-note').textContent='✓ 网页已恢复 · 摄像头已关闭';mascot?.setMode('celebrate');if(soundEnabled)voice.announce({stage:3});
 }
 $('start').onclick=start;$('retry').onclick=start;
-$('exit').onclick=()=>{document.body.dataset.pausing='true';stopCamera();mascot?.setMode('confused');$('pause-dialog').showModal();};
-$('cancel').onclick=()=>{delete document.body.dataset.pausing;$('pause-dialog').close();if(!$('exercise').hidden){$('retry').hidden=false;$('feedback').textContent='已暂停，点击重新开启摄像头';}mascot?.setMode('idle');};
+$('exit').onclick=()=>{document.body.dataset.pausing='true';stopCamera();mascot?.setMode(ACTIONS[counter.stage]?.id||'idle');$('pause-dialog').showModal();};
+$('cancel').onclick=()=>{delete document.body.dataset.pausing;$('pause-dialog').close();if(!$('exercise').hidden){$('retry').hidden=false;$('feedback').textContent='已暂停，点击重新开启摄像头';}mascot?.setMode(ACTIONS[counter.stage]?.id||'idle');};
 $('pause-dialog').addEventListener('cancel',()=>{delete document.body.dataset.pausing;if(!$('exercise').hidden)$('retry').hidden=false;});
-for(const button of document.querySelectorAll('[data-minutes]'))button.onclick=async()=>{button.disabled=true;try{stopCamera();await send({type:'pause',minutes:Number(button.dataset.minutes)});$('pause-dialog').close();delete document.body.dataset.pausing;setView('done');document.body.dataset.outcome='paused';$('welcome').hidden=true;$('exercise').hidden=true;$('done').hidden=false;document.querySelector('#done h2').textContent='给自己一点空间。';document.querySelector('#done .muted').textContent='提醒已暂停，准备好了再见。';document.querySelector('.completion-note').textContent='本次已跳过，不计完成 · 摄像头已关闭';$('status').textContent='Ⅱ 提醒已暂停';$('lock-note').textContent='网页已恢复';$('speech').textContent='没关系，我会在这里等你。';mascot?.setMode('idle');}catch(e){alert(e.message);}finally{button.disabled=false;}};
-$('return').onclick=async()=>{clearBackdrop();stopCamera();if(extension){await send({type:'return'});window.close();}else location.href='popup.html';};
-window.addEventListener('pagehide',()=>{clearBackdrop();stopCamera();});
+for(const button of document.querySelectorAll('[data-minutes]'))button.onclick=async()=>{button.disabled=true;try{stopCamera();clearLocalProgress();await send({type:'pause',minutes:Number(button.dataset.minutes)});$('pause-dialog').close();delete document.body.dataset.pausing;setView('done');document.body.dataset.outcome='paused';$('welcome').hidden=true;$('exercise').hidden=true;$('done').hidden=false;document.querySelector('#done h2').textContent='给自己一点空间。';document.querySelector('#done .muted').textContent='提醒已暂停，准备好了再见。';document.querySelector('.completion-note').textContent='本次已跳过，不计完成 · 摄像头已关闭';$('status').textContent='Ⅱ 提醒已暂停';$('lock-note').textContent='网页已恢复';$('speech').textContent='没关系，我会在这里等你。';mascot?.setMode('idle');}catch(e){alert(e.message);}finally{button.disabled=false;}};
+$('return').onclick=async()=>{stopCamera();clearLocalProgress();if(extension){await send({type:'return'});window.close();}else if(embedded)window.parent.postMessage({type:'rest-preview-close'},location.origin);else location.href='index.html?rest=done';};
+window.addEventListener('pagehide',()=>{stopCamera();mascotMedia.dispose();mascotModel?.dispose();});
 function resetWelcome(s){
- setView('welcome');delete document.body.dataset.outcome;delete document.body.dataset.tracking;loadBackdrop().catch(console.warn);
+ setView('welcome');delete document.body.dataset.outcome;delete document.body.dataset.tracking;
  stopCamera();session=s;counter=new PoseCounter(s);finished=false;
  $('welcome').hidden=false;$('exercise').hidden=true;$('done').hidden=true;$('retry').hidden=true;
  $('status').textContent='● 准备开始';$('step-label').textContent='1 / 3';$('header-stage').textContent='第 1 组 / 大鹏展翅';
  document.querySelector('#done h2').textContent='这一组完成啦！';
  document.querySelector('#done .muted').textContent='身体松了口气，好状态也回来了。';
- document.querySelector('.completion-note').textContent='三组动作共 150 次已完成 · 摄像头已关闭';
+ document.querySelector('.completion-note').textContent='三组动作共 30 次已完成 · 摄像头已关闭';
  $('speech').textContent='新的一小段休息，一起伸个懒腰吧。';
- $('lock-note').textContent='▣ 休息完成后，网页自动恢复';mascot?.setMode('idle');
+ $('lock-note').textContent='休息完成后，网页自动恢复';mascot?.setMode('idle');
 }
 function showPaused(s){
  setView('welcome');

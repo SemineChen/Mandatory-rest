@@ -1,0 +1,17 @@
+{
+  "verdict": "review",
+  "assets": [
+    {
+      "asset": "public/assets/garden/environment.png",
+      "finalAsset": "public/assets/garden/environment.png",
+      "effectivePixelDensity": 1,
+      "identityVerdict": "review",
+      "sharpnessVerdict": "pass",
+      "visualVerdict": "review",
+      "notes": "Existing 1536×1024 clean environment reused; visual differs from original."
+    }
+  ],
+  "issues": [
+    "Character, speech and panel assets have no accepted alpha output"
+  ]
+}

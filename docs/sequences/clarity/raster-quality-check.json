@@ -1,0 +1,33 @@
+{
+  "finalQualityVerdict": "pass-for-clarity-and-measured-stability",
+  "tool": "built-in image_gen",
+  "sourceCellSizes": {
+    "wings": [
+      313.5,
+      313.5
+    ],
+    "updown": [
+      443.5,
+      443.5
+    ],
+    "twist": [
+      313.5,
+      313.5
+    ]
+  },
+  "finalCellSize": [
+    887,
+    887
+  ],
+  "newPixelsGenerated": true,
+  "interpolatedUpscaleWasPrimaryMethod": false,
+  "postProcessing": [
+    "alpha packaging",
+    "fur midtone matching",
+    "torso-anchor registration during playback"
+  ],
+  "limitations": [
+    "Fine fur texture and some small facial details still vary between independently redrawn frames.",
+    "Torso twist keeps the original view-dependent width changes; uniform width is only required for the two frontal actions."
+  ]
+}

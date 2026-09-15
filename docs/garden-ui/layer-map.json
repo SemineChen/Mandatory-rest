@@ -1,0 +1,338 @@
+[
+  {
+    "id": "environment",
+    "name": "environment",
+    "bbox": {
+      "x": 0,
+      "y": 0,
+      "width": 1536,
+      "height": 1024
+    },
+    "layerType": "locked-background",
+    "ownership": "asset-owned",
+    "implementation": "regenerate",
+    "assetRef": "public/assets/garden/environment.png",
+    "geometryClass": "textured",
+    "rasterRequired": true,
+    "allowText": false,
+    "editable": false,
+    "interactive": false,
+    "zIndex": 0,
+    "reason": "用户授权图片工具生成独立素材"
+  },
+  {
+    "id": "mascot",
+    "name": "mascot",
+    "bbox": {
+      "x": 250,
+      "y": 240,
+      "width": 590,
+      "height": 635
+    },
+    "layerType": "asset-regenerated",
+    "ownership": "asset-owned",
+    "implementation": "regenerate",
+    "assetRef": "public/assets/garden/mascot.png",
+    "geometryClass": "organic",
+    "rasterRequired": true,
+    "allowText": false,
+    "editable": false,
+    "interactive": false,
+    "zIndex": 3,
+    "reason": "用户授权图片工具生成独立素材"
+  },
+  {
+    "id": "speech",
+    "name": "speech",
+    "bbox": {
+      "x": 88,
+      "y": 173,
+      "width": 374,
+      "height": 134
+    },
+    "layerType": "asset-regenerated",
+    "ownership": "asset-owned",
+    "implementation": "regenerate",
+    "assetRef": "public/assets/garden/speech.png",
+    "geometryClass": "irregular",
+    "rasterRequired": true,
+    "allowText": false,
+    "editable": false,
+    "interactive": false,
+    "zIndex": 5,
+    "reason": "用户授权图片工具生成独立素材"
+  },
+  {
+    "id": "panel",
+    "name": "panel",
+    "bbox": {
+      "x": 880,
+      "y": 110,
+      "width": 605,
+      "height": 683
+    },
+    "layerType": "asset-regenerated",
+    "ownership": "asset-owned",
+    "implementation": "regenerate",
+    "assetRef": "public/assets/garden/panel.png",
+    "geometryClass": "textured",
+    "rasterRequired": true,
+    "allowText": false,
+    "editable": false,
+    "interactive": false,
+    "zIndex": 4,
+    "reason": "用户授权图片工具生成独立素材"
+  },
+  {
+    "id": "sparkles",
+    "name": "sparkles",
+    "bbox": {
+      "x": 243,
+      "y": 185,
+      "width": 625,
+      "height": 467
+    },
+    "layerType": "asset-regenerated",
+    "ownership": "asset-owned",
+    "implementation": "regenerate",
+    "assetRef": "public/assets/garden/sparkles.png",
+    "geometryClass": "hand-drawn",
+    "rasterRequired": true,
+    "allowText": false,
+    "editable": false,
+    "interactive": false,
+    "zIndex": 2,
+    "reason": "用户授权图片工具生成独立素材"
+  },
+  {
+    "id": "speech-text",
+    "name": "speech-text",
+    "bbox": {
+      "x": 120,
+      "y": 220,
+      "width": 282,
+      "height": 40
+    },
+    "layerType": "dom-text",
+    "ownership": "code-owned",
+    "implementation": "dom",
+    "assetRef": null,
+    "geometryClass": "basic",
+    "rasterRequired": false,
+    "allowText": false,
+    "editable": true,
+    "interactive": false,
+    "zIndex": 6,
+    "reason": "可维护的实时文字、摄像头或基础形状"
+  },
+  {
+    "id": "status",
+    "name": "status",
+    "bbox": {
+      "x": 932,
+      "y": 143,
+      "width": 290,
+      "height": 34
+    },
+    "layerType": "dom-text",
+    "ownership": "code-owned",
+    "implementation": "dom",
+    "assetRef": null,
+    "geometryClass": "basic",
+    "rasterRequired": false,
+    "allowText": false,
+    "editable": true,
+    "interactive": false,
+    "zIndex": 6,
+    "reason": "可维护的实时文字、摄像头或基础形状"
+  },
+  {
+    "id": "step",
+    "name": "step",
+    "bbox": {
+      "x": 1385,
+      "y": 149,
+      "width": 49,
+      "height": 27
+    },
+    "layerType": "dom-text",
+    "ownership": "code-owned",
+    "implementation": "dom",
+    "assetRef": null,
+    "geometryClass": "basic",
+    "rasterRequired": false,
+    "allowText": false,
+    "editable": true,
+    "interactive": false,
+    "zIndex": 6,
+    "reason": "可维护的实时文字、摄像头或基础形状"
+  },
+  {
+    "id": "action",
+    "name": "action",
+    "bbox": {
+      "x": 932,
+      "y": 210,
+      "width": 500,
+      "height": 55
+    },
+    "layerType": "dom-text",
+    "ownership": "code-owned",
+    "implementation": "dom",
+    "assetRef": null,
+    "geometryClass": "basic",
+    "rasterRequired": false,
+    "allowText": false,
+    "editable": true,
+    "interactive": false,
+    "zIndex": 6,
+    "reason": "可维护的实时文字、摄像头或基础形状"
+  },
+  {
+    "id": "instruction",
+    "name": "instruction",
+    "bbox": {
+      "x": 932,
+      "y": 276,
+      "width": 500,
+      "height": 32
+    },
+    "layerType": "dom-text",
+    "ownership": "code-owned",
+    "implementation": "dom",
+    "assetRef": null,
+    "geometryClass": "basic",
+    "rasterRequired": false,
+    "allowText": false,
+    "editable": true,
+    "interactive": false,
+    "zIndex": 6,
+    "reason": "可维护的实时文字、摄像头或基础形状"
+  },
+  {
+    "id": "camera",
+    "name": "camera",
+    "bbox": {
+      "x": 930,
+      "y": 326,
+      "width": 504,
+      "height": 280
+    },
+    "layerType": "dom-component",
+    "ownership": "code-owned",
+    "implementation": "dom",
+    "assetRef": null,
+    "geometryClass": "basic",
+    "rasterRequired": false,
+    "allowText": false,
+    "editable": true,
+    "interactive": true,
+    "zIndex": 6,
+    "reason": "可维护的实时文字、摄像头或基础形状"
+  },
+  {
+    "id": "count",
+    "name": "count",
+    "bbox": {
+      "x": 932,
+      "y": 626,
+      "width": 190,
+      "height": 95
+    },
+    "layerType": "dom-text",
+    "ownership": "code-owned",
+    "implementation": "dom",
+    "assetRef": null,
+    "geometryClass": "basic",
+    "rasterRequired": false,
+    "allowText": false,
+    "editable": true,
+    "interactive": false,
+    "zIndex": 6,
+    "reason": "可维护的实时文字、摄像头或基础形状"
+  },
+  {
+    "id": "feedback",
+    "name": "feedback",
+    "bbox": {
+      "x": 1160,
+      "y": 641,
+      "width": 274,
+      "height": 36
+    },
+    "layerType": "dom-text",
+    "ownership": "code-owned",
+    "implementation": "dom",
+    "assetRef": null,
+    "geometryClass": "basic",
+    "rasterRequired": false,
+    "allowText": false,
+    "editable": true,
+    "interactive": false,
+    "zIndex": 6,
+    "reason": "可维护的实时文字、摄像头或基础形状"
+  },
+  {
+    "id": "next",
+    "name": "next",
+    "bbox": {
+      "x": 1165,
+      "y": 694,
+      "width": 270,
+      "height": 28
+    },
+    "layerType": "dom-text",
+    "ownership": "code-owned",
+    "implementation": "dom",
+    "assetRef": null,
+    "geometryClass": "basic",
+    "rasterRequired": false,
+    "allowText": false,
+    "editable": true,
+    "interactive": false,
+    "zIndex": 6,
+    "reason": "可维护的实时文字、摄像头或基础形状"
+  },
+  {
+    "id": "progress",
+    "name": "progress",
+    "bbox": {
+      "x": 932,
+      "y": 741,
+      "width": 501,
+      "height": 14
+    },
+    "layerType": "css-basic-shape",
+    "ownership": "code-owned",
+    "implementation": "css",
+    "assetRef": null,
+    "geometryClass": "basic",
+    "rasterRequired": false,
+    "allowText": false,
+    "editable": true,
+    "interactive": false,
+    "zIndex": 6,
+    "reason": "可维护的实时文字、摄像头或基础形状"
+  },
+  {
+    "id": "lock",
+    "name": "lock",
+    "bbox": {
+      "x": 565,
+      "y": 923,
+      "width": 405,
+      "height": 55
+    },
+    "layerType": "dom-component",
+    "ownership": "code-owned",
+    "implementation": "dom",
+    "assetRef": null,
+    "geometryClass": "basic",
+    "rasterRequired": false,
+    "allowText": false,
+    "editable": true,
+    "interactive": false,
+    "zIndex": 6,
+    "reason": "可维护的实时文字、摄像头或基础形状"
+  }
+]

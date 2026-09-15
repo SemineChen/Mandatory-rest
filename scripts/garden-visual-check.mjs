@@ -1,0 +1,17 @@
+import {chromium} from '@playwright/test';
+import {mkdir,writeFile} from 'node:fs/promises';
+const out='artifacts/garden-ui';await mkdir(out,{recursive:true});
+const browser=await chromium.launch({headless:true});
+const page=await browser.newPage({viewport:{width:1536,height:1024},deviceScaleFactor:1});
+const errors=[];page.on('pageerror',e=>errors.push(e.message));
+await page.goto('http://localhost:4173/break.html');await page.waitForTimeout(1500);
+await page.screenshot({path:out+'/welcome.png'});
+await page.locator('#start').click();await page.locator('#retry').waitFor({state:'visible'});
+await page.screenshot({path:out+'/camera-error.png'});
+await page.evaluate(()=>{delete document.body.dataset.cameraError;document.querySelector('#retry').hidden=true;document.querySelector('#status').textContent='◌ 等待入镜';document.querySelector('#feedback').textContent='肩膀和一侧手肘入镜';});
+await page.screenshot({path:out+'/exercise-waiting.png'});
+const boxes=await page.evaluate(()=>Object.fromEntries(['.card','.camera','.speech','.progress','.card-top','#action-title','#feedback','#lock-note'].map(s=>{const r=document.querySelector(s).getBoundingClientRect();return[s,{x:r.x,y:r.y,width:r.width,height:r.height}]})));
+await page.locator('#exit').focus();await page.locator('#exit').click();await page.screenshot({path:out+'/paused.png'});
+await page.locator('[data-minutes="30"]').click();await page.screenshot({path:out+'/skipped.png'});
+await page.setViewportSize({width:390,height:844});await page.goto('http://localhost:4173/break.html');await page.locator('#start').click();await page.locator('#retry').waitFor({state:'visible'});await page.screenshot({path:out+'/mobile.png',fullPage:true});
+await writeFile(out+'/measurements.json',JSON.stringify({boxes,errors},null,2));console.log({boxes,errors});await browser.close();

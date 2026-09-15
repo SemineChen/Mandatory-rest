@@ -1,0 +1,109 @@
+{
+  "status": "blocked-by-image-tool-clean-plate",
+  "reason": "Four transparent-asset outputs including one explicit background-removal retry are all RGB PNG (colorType=2), without alpha. User explicitly disallows local cutout. No rejected asset was added to the UI.",
+  "reference": "artifacts/ui-reference/reference.png",
+  "assets": [
+    {
+      "asset": "public/assets/garden/mascot.png",
+      "sourceBbox": {
+        "x": 250,
+        "y": 240,
+        "width": 590,
+        "height": 635
+      },
+      "targetPixelSize": {
+        "width": 590,
+        "height": 635
+      },
+      "removeText": [
+        "所有动态界面文字"
+      ],
+      "preserveDetails": [
+        "原始轮廓、曲率、端点、姿态、光线方向和材质"
+      ],
+      "reason": [
+        "Generation returned RGB checkerboard, no alpha channel"
+      ],
+      "recommendedPrompt": "Output an actual RGBA PNG: exterior alpha=0, preserve reference contour and lighting, remove all checkerboard pixels and all UI text. Preserve individual fur edges and exact pose."
+    },
+    {
+      "asset": "public/assets/garden/speech.png",
+      "sourceBbox": {
+        "x": 88,
+        "y": 173,
+        "width": 374,
+        "height": 134
+      },
+      "targetPixelSize": {
+        "width": 374,
+        "height": 134
+      },
+      "removeText": [
+        "所有动态界面文字"
+      ],
+      "preserveDetails": [
+        "原始轮廓、曲率、端点、姿态、光线方向和材质"
+      ],
+      "reason": [
+        "Generation returned RGB checkerboard, no alpha channel"
+      ],
+      "recommendedPrompt": "Output an actual RGBA PNG: exterior alpha=0, preserve reference contour and lighting, remove all checkerboard pixels and all UI text. Interior glass must be semitransparent."
+    },
+    {
+      "asset": "public/assets/garden/panel.png",
+      "sourceBbox": {
+        "x": 880,
+        "y": 110,
+        "width": 605,
+        "height": 683
+      },
+      "targetPixelSize": {
+        "width": 605,
+        "height": 683
+      },
+      "removeText": [
+        "所有动态界面文字"
+      ],
+      "preserveDetails": [
+        "原始轮廓、曲率、端点、姿态、光线方向和材质"
+      ],
+      "reason": [
+        "Generation returned RGB checkerboard, no alpha channel"
+      ],
+      "recommendedPrompt": "Output an actual RGBA PNG: exterior alpha=0, preserve reference contour and lighting, remove all checkerboard pixels and all UI text. Interior glass must be semitransparent."
+    },
+    {
+      "asset": "public/assets/garden/sparkles.png",
+      "sourceBbox": {
+        "x": 243,
+        "y": 185,
+        "width": 625,
+        "height": 467
+      },
+      "targetPixelSize": {
+        "width": 625,
+        "height": 467
+      },
+      "removeText": [
+        "所有动态界面文字"
+      ],
+      "preserveDetails": [
+        "原始轮廓、曲率、端点、姿态、光线方向和材质"
+      ],
+      "reason": [
+        "Deferred until transparent-output capability is available"
+      ],
+      "recommendedPrompt": "Output an actual RGBA PNG: exterior alpha=0, preserve reference contour and lighting, remove all checkerboard pixels and all UI text. Preserve individual fur edges and exact pose."
+    }
+  ],
+  "readyAsset": "public/assets/garden/environment.png",
+  "implementationStarted": true,
+  "implementationStatus": "Provisional working layout and video adapter built and tested; fidelity incomplete",
+  "latestAttempt": {
+    "tool": "image_gen.imagegen",
+    "output": "/Users/chenyueping/.codex/generated_images/01a08448-d667-7712-8c7f-b9f67278952e/exec-6609f939-25e0-4e2a-bb90-c5943f2df830.png",
+    "hasAlpha": false,
+    "installed": false
+  },
+  "pendingDecision": "Asked user whether local extraction is allowed or they will provide transparent media"
+}

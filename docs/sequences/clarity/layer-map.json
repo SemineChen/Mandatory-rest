@@ -1,0 +1,15 @@
+[
+  {
+    "id": "mascot",
+    "ownership": "asset-owned",
+    "implementation": "regenerate",
+    "rasterRequired": true,
+    "cssBBox": "existing 800 × 800 design units",
+    "preserve": [
+      "DOM controls",
+      "environment",
+      "counting",
+      "movement order"
+    ]
+  }
+]

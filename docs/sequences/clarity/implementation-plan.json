@@ -1,0 +1,8 @@
+[
+  "Capture current canvas resolution and fail clarity check",
+  "Redraw pairs through built-in image_gen",
+  "Verify identity, poses and 887px square cells",
+  "Load keyed high-resolution pairs and preserve original character footprint",
+  "Build and test all desktop/mobile action cycles",
+  "Capture before/after evidence and record quality"
+]

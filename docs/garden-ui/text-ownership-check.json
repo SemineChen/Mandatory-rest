@@ -1,0 +1,16 @@
+{
+  "verdict": "pass",
+  "checks": [
+    {
+      "id": "unique-text-owner",
+      "applicable": true,
+      "verdict": "pass",
+      "evidence": [
+        "public/break.html",
+        "artifacts/garden-ui/exercise-waiting.png"
+      ],
+      "notes": "All exercise text remains live DOM. Environment contains no duplicate UI text."
+    }
+  ],
+  "issues": []
+}

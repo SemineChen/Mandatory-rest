@@ -1,0 +1,265 @@
+[
+  {
+    "name": "wings",
+    "pair": 0,
+    "target": "public/assets/sequences/wings-pair-hq-0.png",
+    "tool": "built-in image_gen",
+    "mode": "identity-preserving redraw",
+    "originalSource": "public/assets/sequences/wings-frames-v2.png",
+    "source": "/Users/chenyueping/.codex/generated_images/01a09ffb-12c9-7c93-8a67-5f94ad50a1ab/exec-0e51536e-1b75-42f6-b729-c7d4c7a893da.png",
+    "prompt": "Use case: identity-preserve. Reference: wings animation sprite atlas, with 4 columns and 4 rows. Read cells left to right, top to bottom. Extract and faithfully RE-RENDER ONLY cells 1 and 2 (row 1, columns 1 and 2) as TWO detailed complete characters placed side by side. Output a landscape 2:1 image, two equally sized SQUARE cells. Do NOT output the entire atlas, ONLY THESE TWO POSES. Match each reference cell exactly: same pose, arm angles, silhouette, body proportions, face orientation, glossy dark eyes, black smile, peach blush, green paw pads, green pompom atop stem, soft pale yellow-green plush, fixed warm lighting. Preserve all body parts completely, NO clipping. Preserve the original square cell composition: same relative character scale and foot baseline at about 95% of each cell height, centers at 25% and 75% of full image width. Newly render exquisitely detailed individually visible fine fur fibers, crisp eyes and paw pads, sharp natural clean edges for LARGE screen display. No design changes, no pose changes, no doubling of limbs, no blur. Background uniformly solid #FF00FF for chroma-keying, no background shadows, no text or grid lines. High resolution 2048x1024 or maximum landscape 2:1 size.",
+    "newPixelsGenerated": true,
+    "resizeWasPrimaryMethod": false
+  },
+  {
+    "name": "wings",
+    "pair": 1,
+    "target": "public/assets/sequences/wings-pair-hq-1.png",
+    "tool": "built-in image_gen",
+    "mode": "identity-preserving redraw",
+    "originalSource": "public/assets/sequences/wings-frames-v2.png",
+    "source": "/Users/chenyueping/.codex/generated_images/01a09ffb-12c9-7c93-8a67-5f94ad50a1ab/exec-1fbb2a84-bcd1-44ba-b622-5680582c5b8b.png",
+    "prompt": "Use case: identity-preserve. Reference: wings animation sprite atlas, with 4 columns and 4 rows. Read cells left to right, top to bottom. Extract and faithfully RE-RENDER ONLY cells 3 and 4 (row 1, columns 3 and 4) as TWO detailed complete characters placed side by side. Output a landscape 2:1 image, two equally sized SQUARE cells. Do NOT output the entire atlas, ONLY THESE TWO POSES. Match each reference cell exactly: same pose, arm angles, silhouette, body proportions, face orientation, glossy dark eyes, black smile, peach blush, green paw pads, green pompom atop stem, soft pale yellow-green plush, fixed warm lighting. Preserve all body parts completely, NO clipping. Preserve the original square cell composition: same relative character scale and foot baseline at about 95% of each cell height, centers at 25% and 75% of full image width. Newly render exquisitely detailed individually visible fine fur fibers, crisp eyes and paw pads, sharp natural clean edges for LARGE screen display. No design changes, no pose changes, no doubling of limbs, no blur. Background uniformly solid #FF00FF for chroma-keying, no background shadows, no text or grid lines. High resolution 2048x1024 or maximum landscape 2:1 size.",
+    "newPixelsGenerated": true,
+    "resizeWasPrimaryMethod": false
+  },
+  {
+    "name": "wings",
+    "pair": 2,
+    "target": "public/assets/sequences/wings-pair-hq-2.png",
+    "tool": "built-in image_gen",
+    "mode": "identity-preserving redraw",
+    "originalSource": "public/assets/sequences/wings-frames-v2.png",
+    "source": "/Users/chenyueping/.codex/generated_images/01a09ffb-12c9-7c93-8a67-5f94ad50a1ab/exec-6177dc18-5771-433b-981b-39ac82923645.png",
+    "prompt": "Use case: identity-preserve. Reference: wings animation sprite atlas, with 4 columns and 4 rows. Read cells left to right, top to bottom. Extract and faithfully RE-RENDER ONLY cells 5 and 6 (row 2, columns 1 and 2) as TWO detailed complete characters placed side by side. Output a landscape 2:1 image, two equally sized SQUARE cells. Do NOT output the entire atlas, ONLY THESE TWO POSES. Match each reference cell exactly: same pose, arm angles, silhouette, body proportions, face orientation, glossy dark eyes, black smile, peach blush, green paw pads, green pompom atop stem, soft pale yellow-green plush, fixed warm lighting. Preserve all body parts completely, NO clipping. Preserve the original square cell composition: same relative character scale and foot baseline at about 95% of each cell height, centers at 25% and 75% of full image width. Newly render exquisitely detailed individually visible fine fur fibers, crisp eyes and paw pads, sharp natural clean edges for LARGE screen display. No design changes, no pose changes, no doubling of limbs, no blur. Background uniformly solid #FF00FF for chroma-keying, no background shadows, no text or grid lines. High resolution 2048x1024 or maximum landscape 2:1 size.",
+    "newPixelsGenerated": true,
+    "resizeWasPrimaryMethod": false
+  },
+  {
+    "name": "wings",
+    "pair": 3,
+    "target": "public/assets/sequences/wings-pair-hq-3.png",
+    "tool": "built-in image_gen",
+    "mode": "identity-preserving redraw",
+    "originalSource": "public/assets/sequences/wings-frames-v2.png",
+    "source": "/Users/chenyueping/.codex/generated_images/01a09ffb-12c9-7c93-8a67-5f94ad50a1ab/exec-ac4e7200-5080-412f-b476-55cce4b95d41.png",
+    "prompt": "Use case: identity-preserve. Reference: wings animation sprite atlas, with 4 columns and 4 rows. Read cells left to right, top to bottom. Extract and faithfully RE-RENDER ONLY cells 7 and 8 (row 2, columns 3 and 4) as TWO detailed complete characters placed side by side. Output a landscape 2:1 image, two equally sized SQUARE cells. Do NOT output the entire atlas, ONLY THESE TWO POSES. Match each reference cell exactly: same pose, arm angles, silhouette, body proportions, face orientation, glossy dark eyes, black smile, peach blush, green paw pads, green pompom atop stem, soft pale yellow-green plush, fixed warm lighting. Preserve all body parts completely, NO clipping. Preserve the original square cell composition: same relative character scale and foot baseline at about 95% of each cell height, centers at 25% and 75% of full image width. Newly render exquisitely detailed individually visible fine fur fibers, crisp eyes and paw pads, sharp natural clean edges for LARGE screen display. No design changes, no pose changes, no doubling of limbs, no blur. Background uniformly solid #FF00FF for chroma-keying, no background shadows, no text or grid lines. High resolution 2048x1024 or maximum landscape 2:1 size.",
+    "newPixelsGenerated": true,
+    "resizeWasPrimaryMethod": false
+  },
+  {
+    "name": "wings",
+    "pair": 4,
+    "target": "public/assets/sequences/wings-pair-hq-4.png",
+    "tool": "built-in image_gen",
+    "mode": "identity-preserving redraw",
+    "originalSource": "public/assets/sequences/wings-frames-v2.png",
+    "source": "/Users/chenyueping/.codex/generated_images/01a09ffb-12c9-7c93-8a67-5f94ad50a1ab/exec-63eeb0a0-5bc3-4c94-b272-5686d5ecdd83.png",
+    "prompt": "Use case: identity-preserve. Reference: wings animation sprite atlas, with 4 columns and 4 rows. Read cells left to right, top to bottom. Extract and faithfully RE-RENDER ONLY cells 9 and 10 (row 3, columns 1 and 2) as TWO detailed complete characters placed side by side. Output a landscape 2:1 image, two equally sized SQUARE cells. Do NOT output the entire atlas, ONLY THESE TWO POSES. Match each reference cell exactly: same pose, arm angles, silhouette, body proportions, face orientation, glossy dark eyes, black smile, peach blush, green paw pads, green pompom atop stem, soft pale yellow-green plush, fixed warm lighting. Preserve all body parts completely, NO clipping. Preserve the original square cell composition: same relative character scale and foot baseline at about 95% of each cell height, centers at 25% and 75% of full image width. Newly render exquisitely detailed individually visible fine fur fibers, crisp eyes and paw pads, sharp natural clean edges for LARGE screen display. No design changes, no pose changes, no doubling of limbs, no blur. Background uniformly solid #FF00FF for chroma-keying, no background shadows, no text or grid lines. High resolution 2048x1024 or maximum landscape 2:1 size.",
+    "newPixelsGenerated": true,
+    "resizeWasPrimaryMethod": false
+  },
+  {
+    "name": "wings",
+    "pair": 5,
+    "target": "public/assets/sequences/wings-pair-hq-5.png",
+    "tool": "built-in image_gen",
+    "mode": "identity-preserving redraw",
+    "originalSource": "public/assets/sequences/wings-frames-v2.png",
+    "source": "/Users/chenyueping/.codex/generated_images/01a09ffb-12c9-7c93-8a67-5f94ad50a1ab/exec-d19fb307-8cf6-4805-8e71-1411db1cae3d.png",
+    "prompt": "Use case: identity-preserve. Reference: wings animation sprite atlas, with 4 columns and 4 rows. Read cells left to right, top to bottom. Extract and faithfully RE-RENDER ONLY cells 11 and 12 (row 3, columns 3 and 4) as TWO detailed complete characters placed side by side. Output a landscape 2:1 image, two equally sized SQUARE cells. Do NOT output the entire atlas, ONLY THESE TWO POSES. Match each reference cell exactly: same pose, arm angles, silhouette, body proportions, face orientation, glossy dark eyes, black smile, peach blush, green paw pads, green pompom atop stem, soft pale yellow-green plush, fixed warm lighting. Preserve all body parts completely, NO clipping. Preserve the original square cell composition: same relative character scale and foot baseline at about 95% of each cell height, centers at 25% and 75% of full image width. Newly render exquisitely detailed individually visible fine fur fibers, crisp eyes and paw pads, sharp natural clean edges for LARGE screen display. No design changes, no pose changes, no doubling of limbs, no blur. Background uniformly solid #FF00FF for chroma-keying, no background shadows, no text or grid lines. High resolution 2048x1024 or maximum landscape 2:1 size.",
+    "newPixelsGenerated": true,
+    "resizeWasPrimaryMethod": false
+  },
+  {
+    "name": "wings",
+    "pair": 6,
+    "target": "public/assets/sequences/wings-pair-hq-6.png",
+    "tool": "built-in image_gen",
+    "mode": "identity-preserving redraw",
+    "originalSource": "public/assets/sequences/wings-frames-v2.png",
+    "source": "/Users/chenyueping/.codex/generated_images/01a09ffb-12c9-7c93-8a67-5f94ad50a1ab/exec-130bf6dc-9065-4dbc-8beb-7a0e661d9338.png",
+    "prompt": "Use case: identity-preserve. Reference: wings animation sprite atlas, with 4 columns and 4 rows. Read cells left to right, top to bottom. Extract and faithfully RE-RENDER ONLY cells 13 and 14 (row 4, columns 1 and 2) as TWO detailed complete characters placed side by side. Output a landscape 2:1 image, two equally sized SQUARE cells. Do NOT output the entire atlas, ONLY THESE TWO POSES. Match each reference cell exactly: same pose, arm angles, silhouette, body proportions, face orientation, glossy dark eyes, black smile, peach blush, green paw pads, green pompom atop stem, soft pale yellow-green plush, fixed warm lighting. Preserve all body parts completely, NO clipping. Preserve the original square cell composition: same relative character scale and foot baseline at about 95% of each cell height, centers at 25% and 75% of full image width. Newly render exquisitely detailed individually visible fine fur fibers, crisp eyes and paw pads, sharp natural clean edges for LARGE screen display. No design changes, no pose changes, no doubling of limbs, no blur. Background uniformly solid #FF00FF for chroma-keying, no background shadows, no text or grid lines. High resolution 2048x1024 or maximum landscape 2:1 size.",
+    "correction": {
+      "prompt": "Use case: precise-object-edit. Edit this TWO-character 2:1 sprite pair. The left mascot is correct and must remain IDENTICAL. Correct ONLY the arms of the RIGHT mascot: both arms should hang DOWN diagonally beside its belly, with paws around the LOWER HIP level, exactly like the LEFT mascot's down-resting pose, just slightly closer to the body. The RIGHT mascot must NOT reach forward and must NOT raise its paws to shoulder/face level. Preserve the right mascot's face, green pompom, green fine fur, glossy eyes, body proportions and planted feet. Preserve exactly TWO complete characters in equal square cells, left and right, same scale and baseline. Keep solid #FF00FF background. 2:1 landscape output, sharp highly detailed fine fur, maximum resolution. No other changes.",
+      "path": "/Users/chenyueping/.codex/generated_images/01a09ffb-12c9-7c93-8a67-5f94ad50a1ab/exec-130bf6dc-9065-4dbc-8beb-7a0e661d9338.png"
+    },
+    "newPixelsGenerated": true,
+    "resizeWasPrimaryMethod": false
+  },
+  {
+    "name": "wings",
+    "pair": 7,
+    "target": "public/assets/sequences/wings-pair-hq-7.png",
+    "tool": "built-in image_gen",
+    "mode": "identity-preserving redraw",
+    "originalSource": "public/assets/sequences/wings-frames-v2.png",
+    "source": "/Users/chenyueping/.codex/generated_images/01a09ffb-12c9-7c93-8a67-5f94ad50a1ab/exec-7aac9012-bbc3-4159-82ef-11025cd46de0.png",
+    "prompt": "Use case: identity-preserve. Reference: wings animation sprite atlas, with 4 columns and 4 rows. Read cells left to right, top to bottom. Extract and faithfully RE-RENDER ONLY cells 15 and 16 (row 4, columns 3 and 4) as TWO detailed complete characters placed side by side. Output a landscape 2:1 image, two equally sized SQUARE cells. Do NOT output the entire atlas, ONLY THESE TWO POSES. Match each reference cell exactly: same pose, arm angles, silhouette, body proportions, face orientation, glossy dark eyes, black smile, peach blush, green paw pads, green pompom atop stem, soft pale yellow-green plush, fixed warm lighting. Preserve all body parts completely, NO clipping. Preserve the original square cell composition: same relative character scale and foot baseline at about 95% of each cell height, centers at 25% and 75% of full image width. Newly render exquisitely detailed individually visible fine fur fibers, crisp eyes and paw pads, sharp natural clean edges for LARGE screen display. No design changes, no pose changes, no doubling of limbs, no blur. Background uniformly solid #FF00FF for chroma-keying, no background shadows, no text or grid lines. High resolution 2048x1024 or maximum landscape 2:1 size.",
+    "newPixelsGenerated": true,
+    "resizeWasPrimaryMethod": false
+  },
+  {
+    "name": "updown",
+    "pair": 0,
+    "target": "public/assets/sequences/updown-pair-hq-0.png",
+    "tool": "built-in image_gen",
+    "mode": "identity-preserving redraw",
+    "originalSource": "public/assets/sequences/updown-frames-v2.png",
+    "source": "/Users/chenyueping/.codex/generated_images/01a09ffb-12c9-7c93-8a67-5f94ad50a1ab/exec-24f88f31-5ea9-4be8-9a57-6f9bfbc7f9a3.png",
+    "prompt": "Use case: identity-preserve. Reference: updown animation sprite atlas, with 4 columns and 2 rows. Read cells left to right, top to bottom. Extract and faithfully RE-RENDER ONLY cells 1 and 2 (row 1, columns 1 and 2) as TWO detailed complete characters placed side by side. Output a landscape 2:1 image, two equally sized SQUARE cells. Do NOT output the entire atlas, ONLY THESE TWO POSES. Match each reference cell exactly: same pose, arm angles, silhouette, body proportions, face orientation, glossy dark eyes, black smile, peach blush, green paw pads, green pompom atop stem, soft pale yellow-green plush, fixed warm lighting. Preserve all body parts completely, NO clipping. Preserve the original square cell composition: same relative character scale and foot baseline at about 95% of each cell height, centers at 25% and 75% of full image width. Newly render exquisitely detailed individually visible fine fur fibers, crisp eyes and paw pads, sharp natural clean edges for LARGE screen display. No design changes, no pose changes, no doubling of limbs, no blur. Background uniformly solid #FF00FF for chroma-keying, no background shadows, no text or grid lines. High resolution 2048x1024 or maximum landscape 2:1 size.",
+    "newPixelsGenerated": true,
+    "resizeWasPrimaryMethod": false
+  },
+  {
+    "name": "updown",
+    "pair": 1,
+    "target": "public/assets/sequences/updown-pair-hq-1.png",
+    "tool": "built-in image_gen",
+    "mode": "identity-preserving redraw",
+    "originalSource": "public/assets/sequences/updown-frames-v2.png",
+    "source": "/Users/chenyueping/.codex/generated_images/01a09ffb-12c9-7c93-8a67-5f94ad50a1ab/exec-54ebaecb-52d9-4a10-8297-8b526294e1a9.png",
+    "prompt": "Use case: identity-preserve. Reference: updown animation sprite atlas, with 4 columns and 2 rows. Read cells left to right, top to bottom. Extract and faithfully RE-RENDER ONLY cells 3 and 4 (row 1, columns 3 and 4) as TWO detailed complete characters placed side by side. Output a landscape 2:1 image, two equally sized SQUARE cells. Do NOT output the entire atlas, ONLY THESE TWO POSES. Match each reference cell exactly: same pose, arm angles, silhouette, body proportions, face orientation, glossy dark eyes, black smile, peach blush, green paw pads, green pompom atop stem, soft pale yellow-green plush, fixed warm lighting. Preserve all body parts completely, NO clipping. Preserve the original square cell composition: same relative character scale and foot baseline at about 95% of each cell height, centers at 25% and 75% of full image width. Newly render exquisitely detailed individually visible fine fur fibers, crisp eyes and paw pads, sharp natural clean edges for LARGE screen display. No design changes, no pose changes, no doubling of limbs, no blur. Background uniformly solid #FF00FF for chroma-keying, no background shadows, no text or grid lines. High resolution 2048x1024 or maximum landscape 2:1 size.",
+    "newPixelsGenerated": true,
+    "resizeWasPrimaryMethod": false
+  },
+  {
+    "name": "updown",
+    "pair": 2,
+    "target": "public/assets/sequences/updown-pair-hq-2.png",
+    "tool": "built-in image_gen",
+    "mode": "identity-preserving redraw",
+    "originalSource": "public/assets/sequences/updown-frames-v2.png",
+    "source": "/Users/chenyueping/.codex/generated_images/01a09ffb-12c9-7c93-8a67-5f94ad50a1ab/exec-56e3f83b-42cc-4782-974e-3de923de299a.png",
+    "prompt": "Use case: identity-preserve. Reference: updown animation sprite atlas, with 4 columns and 2 rows. Read cells left to right, top to bottom. Extract and faithfully RE-RENDER ONLY cells 5 and 6 (row 2, columns 1 and 2) as TWO detailed complete characters placed side by side. Output a landscape 2:1 image, two equally sized SQUARE cells. Do NOT output the entire atlas, ONLY THESE TWO POSES. Match each reference cell exactly: same pose, arm angles, silhouette, body proportions, face orientation, glossy dark eyes, black smile, peach blush, green paw pads, green pompom atop stem, soft pale yellow-green plush, fixed warm lighting. Preserve all body parts completely, NO clipping. Preserve the original square cell composition: same relative character scale and foot baseline at about 95% of each cell height, centers at 25% and 75% of full image width. Newly render exquisitely detailed individually visible fine fur fibers, crisp eyes and paw pads, sharp natural clean edges for LARGE screen display. No design changes, no pose changes, no doubling of limbs, no blur. Background uniformly solid #FF00FF for chroma-keying, no background shadows, no text or grid lines. High resolution 2048x1024 or maximum landscape 2:1 size.",
+    "newPixelsGenerated": true,
+    "resizeWasPrimaryMethod": false
+  },
+  {
+    "name": "updown",
+    "pair": 3,
+    "target": "public/assets/sequences/updown-pair-hq-3.png",
+    "tool": "built-in image_gen",
+    "mode": "identity-preserving redraw",
+    "originalSource": "public/assets/sequences/updown-frames-v2.png",
+    "source": "/Users/chenyueping/.codex/generated_images/01a09ffb-12c9-7c93-8a67-5f94ad50a1ab/exec-79f356b8-c8df-4935-9f5c-bd69bba53917.png",
+    "prompt": "Use case: identity-preserve. Reference: updown animation sprite atlas, with 4 columns and 2 rows. Read cells left to right, top to bottom. Extract and faithfully RE-RENDER ONLY cells 7 and 8 (row 2, columns 3 and 4) as TWO detailed complete characters placed side by side. Output a landscape 2:1 image, two equally sized SQUARE cells. Do NOT output the entire atlas, ONLY THESE TWO POSES. Match each reference cell exactly: same pose, arm angles, silhouette, body proportions, face orientation, glossy dark eyes, black smile, peach blush, green paw pads, green pompom atop stem, soft pale yellow-green plush, fixed warm lighting. Preserve all body parts completely, NO clipping. Preserve the original square cell composition: same relative character scale and foot baseline at about 95% of each cell height, centers at 25% and 75% of full image width. Newly render exquisitely detailed individually visible fine fur fibers, crisp eyes and paw pads, sharp natural clean edges for LARGE screen display. No design changes, no pose changes, no doubling of limbs, no blur. Background uniformly solid #FF00FF for chroma-keying, no background shadows, no text or grid lines. High resolution 2048x1024 or maximum landscape 2:1 size.",
+    "correction": {
+      "prompt": "Use case: precise-object-edit. Edit target: first image, a TWO-character horizontal animation sprite pair. The LEFT character remains EXACTLY as it is, both arms horizontal. Correct ONLY the arm directions of the RIGHT character. Its SCREEN-LEFT arm (its own right arm) must point diagonally UP to the upper LEFT. Its SCREEN-RIGHT arm (its own left arm) must point diagonally DOWN to the lower RIGHT. Thus swap which arm is up and which is down from the edit target. Use the RIGHT character in the second reference image as the exact pose reference for the new right character. Preserve pose of left character, character identity, glossy eyes, peach blush, fine light-green plush fur, feet, body, pompom, camera, scale, lighting, and cell margins. Keep exactly two complete characters side by side in equal SQUARE cells in a 2:1 landscape image, solid #FF00FF background, maximum resolution and sharp detail. No text.",
+      "path": "/Users/chenyueping/.codex/generated_images/01a09ffb-12c9-7c93-8a67-5f94ad50a1ab/exec-79f356b8-c8df-4935-9f5c-bd69bba53917.png"
+    },
+    "newPixelsGenerated": true,
+    "resizeWasPrimaryMethod": false
+  },
+  {
+    "name": "twist",
+    "pair": 0,
+    "target": "public/assets/sequences/twist-pair-hq-0.png",
+    "tool": "built-in image_gen",
+    "mode": "identity-preserving redraw",
+    "originalSource": "public/assets/sequences/twist-frames-v2.png",
+    "source": "/Users/chenyueping/.codex/generated_images/01a09ffb-12c9-7c93-8a67-5f94ad50a1ab/exec-cf92d0bd-3bfc-4d2d-9d01-37defec51e69.png",
+    "prompt": "Use case: identity-preserve. Reference: twist animation sprite atlas, with 4 columns and 4 rows. Read cells left to right, top to bottom. Extract and faithfully RE-RENDER ONLY cells 1 and 2 (row 1, columns 1 and 2) as TWO detailed complete characters placed side by side. Output a landscape 2:1 image, two equally sized SQUARE cells. Do NOT output the entire atlas, ONLY THESE TWO POSES. Match each reference cell exactly: same pose, arm angles, silhouette, body proportions, face orientation, glossy dark eyes, black smile, peach blush, green paw pads, green pompom atop stem, soft pale yellow-green plush, fixed warm lighting. Preserve all body parts completely, NO clipping. Preserve the original square cell composition: same relative character scale and foot baseline at about 95% of each cell height, centers at 25% and 75% of full image width. Newly render exquisitely detailed individually visible fine fur fibers, crisp eyes and paw pads, sharp natural clean edges for LARGE screen display. No design changes, no pose changes, no doubling of limbs, no blur. Background uniformly solid #FF00FF for chroma-keying, no background shadows, no text or grid lines. High resolution 2048x1024 or maximum landscape 2:1 size.",
+    "newPixelsGenerated": true,
+    "resizeWasPrimaryMethod": false
+  },
+  {
+    "name": "twist",
+    "pair": 1,
+    "target": "public/assets/sequences/twist-pair-hq-1.png",
+    "tool": "built-in image_gen",
+    "mode": "identity-preserving redraw",
+    "originalSource": "public/assets/sequences/twist-frames-v2.png",
+    "source": "/Users/chenyueping/.codex/generated_images/01a09ffb-12c9-7c93-8a67-5f94ad50a1ab/exec-dd64e7af-5767-4ef8-8ec3-7033dddc7d45.png",
+    "prompt": "Use case: identity-preserve. Reference: twist animation sprite atlas, with 4 columns and 4 rows. Read cells left to right, top to bottom. Extract and faithfully RE-RENDER ONLY cells 3 and 4 (row 1, columns 3 and 4) as TWO detailed complete characters placed side by side. Output a landscape 2:1 image, two equally sized SQUARE cells. Do NOT output the entire atlas, ONLY THESE TWO POSES. Match each reference cell exactly: same pose, arm angles, silhouette, body proportions, face orientation, glossy dark eyes, black smile, peach blush, green paw pads, green pompom atop stem, soft pale yellow-green plush, fixed warm lighting. Preserve all body parts completely, NO clipping. Preserve the original square cell composition: same relative character scale and foot baseline at about 95% of each cell height, centers at 25% and 75% of full image width. Newly render exquisitely detailed individually visible fine fur fibers, crisp eyes and paw pads, sharp natural clean edges for LARGE screen display. No design changes, no pose changes, no doubling of limbs, no blur. Background uniformly solid #FF00FF for chroma-keying, no background shadows, no text or grid lines. High resolution 2048x1024 or maximum landscape 2:1 size.",
+    "newPixelsGenerated": true,
+    "resizeWasPrimaryMethod": false
+  },
+  {
+    "name": "twist",
+    "pair": 2,
+    "target": "public/assets/sequences/twist-pair-hq-2.png",
+    "tool": "built-in image_gen",
+    "mode": "identity-preserving redraw",
+    "originalSource": "public/assets/sequences/twist-frames-v2.png",
+    "source": "/Users/chenyueping/.codex/generated_images/01a09ffb-12c9-7c93-8a67-5f94ad50a1ab/exec-efb6cf0d-0aef-48b9-a01a-22a7824b7ff7.png",
+    "prompt": "Use case: identity-preserve. Reference: twist animation sprite atlas, with 4 columns and 4 rows. Read cells left to right, top to bottom. Extract and faithfully RE-RENDER ONLY cells 5 and 6 (row 2, columns 1 and 2) as TWO detailed complete characters placed side by side. Output a landscape 2:1 image, two equally sized SQUARE cells. Do NOT output the entire atlas, ONLY THESE TWO POSES. Match each reference cell exactly: same pose, arm angles, silhouette, body proportions, face orientation, glossy dark eyes, black smile, peach blush, green paw pads, green pompom atop stem, soft pale yellow-green plush, fixed warm lighting. Preserve all body parts completely, NO clipping. Preserve the original square cell composition: same relative character scale and foot baseline at about 95% of each cell height, centers at 25% and 75% of full image width. Newly render exquisitely detailed individually visible fine fur fibers, crisp eyes and paw pads, sharp natural clean edges for LARGE screen display. No design changes, no pose changes, no doubling of limbs, no blur. Background uniformly solid #FF00FF for chroma-keying, no background shadows, no text or grid lines. High resolution 2048x1024 or maximum landscape 2:1 size.",
+    "newPixelsGenerated": true,
+    "resizeWasPrimaryMethod": false
+  },
+  {
+    "name": "twist",
+    "pair": 3,
+    "target": "public/assets/sequences/twist-pair-hq-3.png",
+    "tool": "built-in image_gen",
+    "mode": "identity-preserving redraw",
+    "originalSource": "public/assets/sequences/twist-frames-v2.png",
+    "source": "/Users/chenyueping/.codex/generated_images/01a09ffb-12c9-7c93-8a67-5f94ad50a1ab/exec-5d34215d-17f9-4314-94ca-9479316fd8fb.png",
+    "prompt": "Use case: identity-preserve. Reference: twist animation sprite atlas, with 4 columns and 4 rows. Read cells left to right, top to bottom. Extract and faithfully RE-RENDER ONLY cells 7 and 8 (row 2, columns 3 and 4) as TWO detailed complete characters placed side by side. Output a landscape 2:1 image, two equally sized SQUARE cells. Do NOT output the entire atlas, ONLY THESE TWO POSES. Match each reference cell exactly: same pose, arm angles, silhouette, body proportions, face orientation, glossy dark eyes, black smile, peach blush, green paw pads, green pompom atop stem, soft pale yellow-green plush, fixed warm lighting. Preserve all body parts completely, NO clipping. Preserve the original square cell composition: same relative character scale and foot baseline at about 95% of each cell height, centers at 25% and 75% of full image width. Newly render exquisitely detailed individually visible fine fur fibers, crisp eyes and paw pads, sharp natural clean edges for LARGE screen display. No design changes, no pose changes, no doubling of limbs, no blur. Background uniformly solid #FF00FF for chroma-keying, no background shadows, no text or grid lines. High resolution 2048x1024 or maximum landscape 2:1 size.",
+    "newPixelsGenerated": true,
+    "resizeWasPrimaryMethod": false,
+    "correction": {
+      "pair": 3,
+      "prompt": "Use case: precise-object-edit. Edit this two-frame animation pair. Keep the LEFT mascot exactly unchanged facing screen-RIGHT in near profile. Change ONLY the RIGHT mascot from front view to a THREE-QUARTER turn toward SCREEN-LEFT (about 40 degrees left). Its eyes and smile shift visibly to the LEFT side of its face. Its screen-right paw is nearer and larger, and its screen-left arm is foreshortened. Both characters keep arms at shoulder height throughout, two planted feet, the identical fine yellow-green plush material, body proportions, peach blush, green pompom, glossy dark eyes, friendly smile and sharp detail. Output exactly TWO complete characters side by side, two equal square cells, 2:1 landscape image at maximum resolution (1774x887 or larger). Keep the same scale and margins, no clipping, no labels, no extras. Background uniformly solid #FF00FF for chroma key. This is a torso twist motion; change torso orientation AND corresponding arms' perspective, never just move the eyes.",
+      "path": "/Users/chenyueping/.codex/generated_images/01a09ffb-12c9-7c93-8a67-5f94ad50a1ab/exec-5d34215d-17f9-4314-94ca-9479316fd8fb.png"
+    }
+  },
+  {
+    "name": "twist",
+    "pair": 4,
+    "target": "public/assets/sequences/twist-pair-hq-4.png",
+    "tool": "built-in image_gen",
+    "mode": "identity-preserving redraw",
+    "originalSource": "public/assets/sequences/twist-frames-v2.png",
+    "source": "/Users/chenyueping/.codex/generated_images/01a09ffb-12c9-7c93-8a67-5f94ad50a1ab/exec-1150ff05-733b-43b0-8a09-ec764a59be22.png",
+    "prompt": "Use case: identity-preserve. Reference: twist animation sprite atlas, with 4 columns and 4 rows. Read cells left to right, top to bottom. Extract and faithfully RE-RENDER ONLY cells 9 and 10 (row 3, columns 1 and 2) as TWO detailed complete characters placed side by side. Output a landscape 2:1 image, two equally sized SQUARE cells. Do NOT output the entire atlas, ONLY THESE TWO POSES. Match each reference cell exactly: same pose, arm angles, silhouette, body proportions, face orientation, glossy dark eyes, black smile, peach blush, green paw pads, green pompom atop stem, soft pale yellow-green plush, fixed warm lighting. Preserve all body parts completely, NO clipping. Preserve the original square cell composition: same relative character scale and foot baseline at about 95% of each cell height, centers at 25% and 75% of full image width. Newly render exquisitely detailed individually visible fine fur fibers, crisp eyes and paw pads, sharp natural clean edges for LARGE screen display. No design changes, no pose changes, no doubling of limbs, no blur. Background uniformly solid #FF00FF for chroma-keying, no background shadows, no text or grid lines. High resolution 2048x1024 or maximum landscape 2:1 size.",
+    "newPixelsGenerated": true,
+    "resizeWasPrimaryMethod": false,
+    "correction": {
+      "pair": 4,
+      "prompt": "Use case: precise-object-edit. Edit this two-frame animation pair. Change ONLY the LEFT mascot: turn its torso and face toward SCREEN-LEFT by about 20 degrees (a gentle left three-quarter turn), not screen-right. Its eyes and smile shift toward the LEFT of its face; its screen-right paw is nearer. Keep the RIGHT mascot exactly unchanged facing front. Both characters keep arms at shoulder height throughout, two planted feet, the identical fine yellow-green plush material, body proportions, peach blush, green pompom, glossy dark eyes, friendly smile and sharp detail. Output exactly TWO complete characters side by side, two equal square cells, 2:1 landscape image at maximum resolution (1774x887 or larger). Keep the same scale and margins, no clipping, no labels, no extras. Background uniformly solid #FF00FF for chroma key. This is a torso twist motion; change torso orientation AND corresponding arms' perspective, never just move the eyes.",
+      "path": "/Users/chenyueping/.codex/generated_images/01a09ffb-12c9-7c93-8a67-5f94ad50a1ab/exec-1150ff05-733b-43b0-8a09-ec764a59be22.png"
+    }
+  },
+  {
+    "name": "twist",
+    "pair": 5,
+    "target": "public/assets/sequences/twist-pair-hq-5.png",
+    "tool": "built-in image_gen",
+    "mode": "identity-preserving redraw",
+    "originalSource": "public/assets/sequences/twist-frames-v2.png",
+    "source": "/Users/chenyueping/.codex/generated_images/01a09ffb-12c9-7c93-8a67-5f94ad50a1ab/exec-20f1ace1-442c-4077-a019-4deb40d25d9b.png",
+    "prompt": "Use case: identity-preserve. Reference: twist animation sprite atlas, with 4 columns and 4 rows. Read cells left to right, top to bottom. Extract and faithfully RE-RENDER ONLY cells 11 and 12 (row 3, columns 3 and 4) as TWO detailed complete characters placed side by side. Output a landscape 2:1 image, two equally sized SQUARE cells. Do NOT output the entire atlas, ONLY THESE TWO POSES. Match each reference cell exactly: same pose, arm angles, silhouette, body proportions, face orientation, glossy dark eyes, black smile, peach blush, green paw pads, green pompom atop stem, soft pale yellow-green plush, fixed warm lighting. Preserve all body parts completely, NO clipping. Preserve the original square cell composition: same relative character scale and foot baseline at about 95% of each cell height, centers at 25% and 75% of full image width. Newly render exquisitely detailed individually visible fine fur fibers, crisp eyes and paw pads, sharp natural clean edges for LARGE screen display. No design changes, no pose changes, no doubling of limbs, no blur. Background uniformly solid #FF00FF for chroma-keying, no background shadows, no text or grid lines. High resolution 2048x1024 or maximum landscape 2:1 size.",
+    "newPixelsGenerated": true,
+    "resizeWasPrimaryMethod": false
+  },
+  {
+    "name": "twist",
+    "pair": 6,
+    "target": "public/assets/sequences/twist-pair-hq-6.png",
+    "tool": "built-in image_gen",
+    "mode": "identity-preserving redraw",
+    "originalSource": "public/assets/sequences/twist-frames-v2.png",
+    "source": "/Users/chenyueping/.codex/generated_images/01a09ffb-12c9-7c93-8a67-5f94ad50a1ab/exec-e577e362-a0ee-42b6-aeb5-f585471c1899.png",
+    "prompt": "Use case: identity-preserve. Reference: twist animation sprite atlas, with 4 columns and 4 rows. Read cells left to right, top to bottom. Extract and faithfully RE-RENDER ONLY cells 13 and 14 (row 4, columns 1 and 2) as TWO detailed complete characters placed side by side. Output a landscape 2:1 image, two equally sized SQUARE cells. Do NOT output the entire atlas, ONLY THESE TWO POSES. Match each reference cell exactly: same pose, arm angles, silhouette, body proportions, face orientation, glossy dark eyes, black smile, peach blush, green paw pads, green pompom atop stem, soft pale yellow-green plush, fixed warm lighting. Preserve all body parts completely, NO clipping. Preserve the original square cell composition: same relative character scale and foot baseline at about 95% of each cell height, centers at 25% and 75% of full image width. Newly render exquisitely detailed individually visible fine fur fibers, crisp eyes and paw pads, sharp natural clean edges for LARGE screen display. No design changes, no pose changes, no doubling of limbs, no blur. Background uniformly solid #FF00FF for chroma-keying, no background shadows, no text or grid lines. High resolution 2048x1024 or maximum landscape 2:1 size.",
+    "newPixelsGenerated": true,
+    "resizeWasPrimaryMethod": false,
+    "correction": {
+      "pair": 6,
+      "prompt": "Use case: precise-object-edit. Edit this two-frame animation pair. Keep the LEFT mascot exactly unchanged in left three-quarter view. Correct ONLY the RIGHT mascot to a near-PROFILE facing SCREEN-LEFT, approximately 75 degrees left. Its single mostly visible eye and smile are at the LEFT edge of its face. Its SCREEN-RIGHT arm and paw are NEAREST the viewer and protrude forward; its screen-left arm is mostly occluded. The right mascot must NOT face screen-right. Both characters keep arms at shoulder height throughout, two planted feet, the identical fine yellow-green plush material, body proportions, peach blush, green pompom, glossy dark eyes, friendly smile and sharp detail. Output exactly TWO complete characters side by side, two equal square cells, 2:1 landscape image at maximum resolution (1774x887 or larger). Keep the same scale and margins, no clipping, no labels, no extras. Background uniformly solid #FF00FF for chroma key. This is a torso twist motion; change torso orientation AND corresponding arms' perspective, never just move the eyes.",
+      "path": "/Users/chenyueping/.codex/generated_images/01a09ffb-12c9-7c93-8a67-5f94ad50a1ab/exec-e577e362-a0ee-42b6-aeb5-f585471c1899.png"
+    }
+  },
+  {
+    "name": "twist",
+    "pair": 7,
+    "target": "public/assets/sequences/twist-pair-hq-7.png",
+    "tool": "built-in image_gen",
+    "mode": "identity-preserving redraw",
+    "originalSource": "public/assets/sequences/twist-frames-v2.png",
+    "source": "/Users/chenyueping/.codex/generated_images/01a09ffb-12c9-7c93-8a67-5f94ad50a1ab/exec-dd95c7ba-fdcf-41f9-a0e6-e168c1131b14.png",
+    "prompt": "Use case: identity-preserve. Reference: twist animation sprite atlas, with 4 columns and 4 rows. Read cells left to right, top to bottom. Extract and faithfully RE-RENDER ONLY cells 15 and 16 (row 4, columns 3 and 4) as TWO detailed complete characters placed side by side. Output a landscape 2:1 image, two equally sized SQUARE cells. Do NOT output the entire atlas, ONLY THESE TWO POSES. Match each reference cell exactly: same pose, arm angles, silhouette, body proportions, face orientation, glossy dark eyes, black smile, peach blush, green paw pads, green pompom atop stem, soft pale yellow-green plush, fixed warm lighting. Preserve all body parts completely, NO clipping. Preserve the original square cell composition: same relative character scale and foot baseline at about 95% of each cell height, centers at 25% and 75% of full image width. Newly render exquisitely detailed individually visible fine fur fibers, crisp eyes and paw pads, sharp natural clean edges for LARGE screen display. No design changes, no pose changes, no doubling of limbs, no blur. Background uniformly solid #FF00FF for chroma-keying, no background shadows, no text or grid lines. High resolution 2048x1024 or maximum landscape 2:1 size.",
+    "newPixelsGenerated": true,
+    "resizeWasPrimaryMethod": false
+  }
+]

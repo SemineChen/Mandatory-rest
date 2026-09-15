@@ -1,0 +1,16 @@
+import {chromium} from '@playwright/test';
+import assert from 'node:assert/strict';
+import {writeFile} from 'node:fs/promises';
+const browser=await chromium.launch({headless:true});
+const page=await browser.newPage({viewport:{width:1536,height:1024}});const errors=[];page.on('pageerror',e=>errors.push(e.message));
+await page.goto('http://localhost:4178/');
+const frame=page.frameLocator('.rest-overlay');await frame.locator('#mascot[data-frame]').waitFor();
+await page.screenshot({path:'artifacts/sequences/welcome.png'});
+const first=await frame.locator('#mascot').getAttribute('data-frame');await page.waitForTimeout(400);assert.notEqual(await frame.locator('#mascot').getAttribute('data-frame'),first);
+await frame.locator('#start').click();await frame.locator('#retry').waitFor({state:'visible'});assert.equal(await frame.locator('#count').textContent(),'0');await page.screenshot({path:'artifacts/sequences/camera-error.png'});
+await frame.locator('#exit').click();await frame.locator('[data-minutes="30"]').click();await frame.locator('#return').click();await page.locator('.rest-overlay').waitFor({state:'detached'});
+await page.locator('#rest-again').click();await frame.locator('#mascot[data-frame]').waitFor();
+await page.setViewportSize({width:390,height:844});await page.screenshot({path:'artifacts/sequences/mobile-welcome.png'});await frame.locator('#start').click();await frame.locator('#retry').waitFor({state:'visible'});await page.screenshot({path:'artifacts/sequences/mobile-camera.png',fullPage:false});
+assert.deepEqual(errors,[]);await browser.close();
+const fake=await chromium.launch({headless:true,args:['--use-fake-device-for-media-stream','--use-fake-ui-for-media-stream']});const camera=await fake.newPage({viewport:{width:1536,height:1024}});await camera.goto('http://localhost:4178/break.html');await camera.locator('#start').click();await camera.waitForFunction(()=>document.querySelector('#video').videoWidth>0);await camera.waitForTimeout(2500);assert.equal(await camera.locator('#count').textContent(),'0');await camera.screenshot({path:'artifacts/sequences/camera-running.png'});await camera.locator('#exit').click();assert.equal(await camera.locator('#video').evaluate(v=>v.srcObject),null);await fake.close();
+await writeFile('artifacts/sequences/test-results.json',JSON.stringify({passed:true,checks:['atlas cycles','no-camera no-count','retry available','exit releases overlay','restart','mobile','real camera pipeline with synthetic device','no-person no-count','camera released on pause'],errors},null,2));console.log('Sequence and camera smoke checks passed');

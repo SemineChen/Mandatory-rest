@@ -1,0 +1,12 @@
+{
+  "seconds": 8,
+  "fps": 30,
+  "frames": 240,
+  "width": 960,
+  "height": 800,
+  "all_frames_decode": true,
+  "webm_alpha_verified": true,
+  "soft_alpha_edges_verified": true,
+  "exact_loop_boundary": true,
+  "method": "generated character asset with continuous 2D deformation"
+}

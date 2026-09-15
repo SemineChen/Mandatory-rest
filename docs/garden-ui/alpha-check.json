@@ -1,0 +1,17 @@
+{
+  "verdict": "fail",
+  "checks": [
+    {
+      "id": "actual-alpha-channel",
+      "applicable": true,
+      "verdict": "fail",
+      "evidence": [
+        "artifacts/ui-reference/generated-alpha-inspection.json"
+      ],
+      "notes": "Every generated transparent-asset candidate is RGB, not RGBA."
+    }
+  ],
+  "issues": [
+    "Generated checkerboard is image content, not transparency."
+  ]
+}

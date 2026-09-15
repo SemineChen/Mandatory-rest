@@ -1,0 +1,7 @@
+{
+  "functional": "pass",
+  "pixelExact": "not claimed",
+  "tests": 31,
+  "browserEvidence": "artifacts/sequences/test-results.json",
+  "alphaEvidence": "artifacts/sequences/cheek-alpha-check.json"
+}

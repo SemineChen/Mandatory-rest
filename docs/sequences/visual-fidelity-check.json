@@ -1,0 +1,29 @@
+{
+  "verdict": "review",
+  "states": [
+    "welcome",
+    "exercise",
+    "camera-error",
+    "mobile",
+    "square"
+  ],
+  "evidence": [
+    "artifacts/sequences/highres-welcome.png",
+    "artifacts/sequences/grounded-desktop.png",
+    "artifacts/sequences/grounded-square.png"
+  ],
+  "verified": [
+    "live DOM beneath translucent garden overlay",
+    "foot baseline at 85 percent viewport minus 2 percent frame padding",
+    "peach blush fully opaque in all character files",
+    "16 high resolution seated frames",
+    "16 frames each exercise"
+  ],
+  "explainedDifferences": [
+    "generated fur and body outlines differ between frames and from reference",
+    "exercise sprite cells remain lower resolution than reminder frames",
+    "underlying page is a DOM creator workspace demonstration; extension overlays actual browser content",
+    "responsive composition follows available viewport rather than exact fixed screenshot pixels"
+  ],
+  "unexplainedDifferences": []
+}

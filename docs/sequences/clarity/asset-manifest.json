@@ -1,0 +1,29 @@
+[
+  {
+    "mode": "wings",
+    "source": "public/assets/sequences/wings-frames-v2.png",
+    "sourceQuality": "low-resolution",
+    "requiredAction": "redraw",
+    "redrawRequired": true,
+    "targetPattern": "public/assets/sequences/wings-pair-hq-*.png",
+    "frames": 16
+  },
+  {
+    "mode": "updown",
+    "source": "public/assets/sequences/updown-frames-v2.png",
+    "sourceQuality": "low-resolution",
+    "requiredAction": "redraw",
+    "redrawRequired": true,
+    "targetPattern": "public/assets/sequences/updown-pair-hq-*.png",
+    "frames": 8
+  },
+  {
+    "mode": "twist",
+    "source": "public/assets/sequences/twist-frames-v2.png",
+    "sourceQuality": "low-resolution",
+    "requiredAction": "redraw",
+    "redrawRequired": true,
+    "targetPattern": "public/assets/sequences/twist-pair-hq-*.png",
+    "frames": 16
+  }
+]

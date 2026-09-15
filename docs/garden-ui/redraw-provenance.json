@@ -1,0 +1,62 @@
+[
+  {
+    "asset": "public/assets/garden/environment.png",
+    "prompt": "Edit the reference into a pure environment clean plate for a layered website, 1536x1024 landscape. Preserve the exact camera, framing, warm sunlight from upper right, lush green plants around edges, wooden tabletop bottom, books and cream mug bottom right, small wooden sign left, bokeh flowers and distant gray monitor backdrop. REMOVE completely the green furry character, speech bubble, sparkles and motion marks, entire right UI glass panel including camera photo and all text, and bottom lock pill. Reconstruct the environment naturally behind all removed foreground objects. The monitor backdrop should be a plain softly blurred dark gray screen with NO text, logos, toolbars or UI; it will be separately layered in code. Do not invent any new foreground object. Keep desk horizon around y=820. No UI, no panels, no speech bubbles, no character, no readable writing anywhere (blank wooden sign, blank mug and book spines). High fidelity to original lighting and composition, detailed natural textures. Output only this single clean background asset.",
+    "tool": "image_gen.imagegen",
+    "mode": "built-in image edit",
+    "callSucceeded": true,
+    "newPixelsGenerated": true,
+    "resizeWasPrimaryMethod": false,
+    "upscaleWasPrimaryMethod": false,
+    "sharpenWasPrimaryMethod": false,
+    "transparentOutputAccepted": false
+  },
+  {
+    "asset": "artifacts/ui-reference/generated-drafts/mascot-initial.png",
+    "prompt": "Create one faithful isolated character asset from this reference UI. Extract/re-render ONLY the exact light pastel lime-green fluffy mascot, same identity, same tilted oval chubby body, tiny pompom on stalk, two glossy black oval eyes, tiny curved smiling mouth, peach cheeks. Same pose: paw on viewer right raised with green paw pads visible, viewer left paw forward low, viewer right foot lifted showing pads, other foot resting below. Keep exact silhouette, proportions, fur microdetail and warm upper-right sunlight from reference. Entire character fits in a 640x680 portrait bounding box, no crop of fur, no new pose or accessories. Output high-resolution PNG with TRUE transparent alpha background, tight framing with modest transparent margin. No scenery, no floor, no UI, no text, no bubble, no stars, no leaf, no motion marks, no ghost limbs. Reference character occupies approximately x250 y240 to x840 y875 in original 1536x1024 image. Generate faithful new pixels, photographic plush fur detail, not a smooth simplified toy. Transparent backdrop mandatory.",
+    "tool": "image_gen.imagegen",
+    "mode": "built-in image edit",
+    "callSucceeded": true,
+    "newPixelsGenerated": true,
+    "resizeWasPrimaryMethod": false,
+    "upscaleWasPrimaryMethod": false,
+    "sharpenWasPrimaryMethod": false,
+    "transparentOutputAccepted": false
+  },
+  {
+    "asset": "artifacts/ui-reference/generated-drafts/speech.png",
+    "prompt": "Generate a SINGLE isolated UI speech-bubble asset matching the white bubble at x88 y173 width335 height134 of the reference. Only the blank warm white asymmetrical soft organic bubble with its small curved tail pointing down-right, same exact outline and subtle warm cream fill; remove ALL text, remove ALL background and mascot. Include the two tiny golden emphasis strokes just outside its upper-right edge as in reference. Transparent PNG with real alpha, no checkerboard artwork, no shadows outside modest edges. Wide landscape aspect approx 380:145, bubble fills most canvas with 5px transparent margin. High resolution clean edges. No lettering whatsoever. Do not output a complete interface, ONLY the blank speech bubble asset.",
+    "tool": "image_gen.imagegen",
+    "mode": "built-in image edit",
+    "callSucceeded": true,
+    "newPixelsGenerated": true,
+    "resizeWasPrimaryMethod": false,
+    "upscaleWasPrimaryMethod": false,
+    "sharpenWasPrimaryMethod": false,
+    "transparentOutputAccepted": false
+  },
+  {
+    "asset": "artifacts/ui-reference/generated-drafts/mascot-alpha-retry.png",
+    "prompt": "Remove the background from this image. This is a background-removal image editing task. Deliver an actual RGBA PNG with transparent alpha=0 pixels outside the mascot, NOT a drawing of a checkerboard. The gray checkerboard is an unwanted background in the input and must be completely removed. Preserve every character pixel and all delicate fur edges. Output only the isolated character on genuinely transparent background. Use transparent-background output processing. No checkerboard, no gray, no white background. Keep the original 1217x1293 canvas and exact subject placement.",
+    "tool": "image_gen.imagegen",
+    "mode": "built-in image edit",
+    "callSucceeded": true,
+    "newPixelsGenerated": true,
+    "resizeWasPrimaryMethod": false,
+    "upscaleWasPrimaryMethod": false,
+    "sharpenWasPrimaryMethod": false,
+    "transparentOutputAccepted": false
+  },
+  {
+    "asset": "artifacts/ui-reference/generated-drafts/panel.png",
+    "prompt": "Generate ONLY the blank glass card surface from the reference right-hand panel (x880,y110,w605,h683). Remove absolutely all text, separators, camera photo, progress bar, numbers and content. Preserve rounded rectangular 38px corner outline with thin luminous white rim and softly frosted gray-green glass, pale sunlight glow at upper right, subtle warm amber lower right, no icons. This is a transparent UI overlay asset. Use actual transparent RGBA PNG output; no checkerboard pixels, no opaque background. Exterior alpha=0 and interior semitransparent frosted glass. Panel should occupy canvas exactly, portrait ratio605:683, sufficient resolution. No scene, no plants, no background scenery, no UI content. Only isolated translucent glass panel with the original refined material and rounded outline. Transparent output mandatory.",
+    "tool": "image_gen.imagegen",
+    "mode": "built-in image edit",
+    "callSucceeded": true,
+    "newPixelsGenerated": true,
+    "resizeWasPrimaryMethod": false,
+    "upscaleWasPrimaryMethod": false,
+    "sharpenWasPrimaryMethod": false,
+    "transparentOutputAccepted": false
+  }
+]

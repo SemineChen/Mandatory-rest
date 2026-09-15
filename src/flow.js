@@ -5,7 +5,7 @@ export const ACTIONS=[
 ];
 export const POSES={waiting:{poster:'assets/poses/waiting.png',video:null},ready:{poster:'assets/poses/ready.png',video:null},complete:{poster:'assets/poses/complete.png',video:null}};
 export class RestFlow{
- constructor({target=50,demo=false,action=0,reps=0}={}){this.target=target;this.demo=demo;this.action=action;this.reps=reps;this.phase='waiting';this.visible=true;}
+ constructor({target=10,demo=false,action=0,reps=0}={}){this.target=target;this.demo=demo;this.action=action;this.reps=reps;this.phase='waiting';this.visible=true;}
  get canRecordCompletion(){return !this.demo&&this.phase==='complete';}
  dispatch(event){
   if(event==='skip'&&!['returned','complete'].includes(this.phase)){this.phase='skipped';return;}
