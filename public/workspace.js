@@ -1,7 +1,7 @@
 let frame;
 function openRest(){
  if(frame)return;
- frame=document.createElement('iframe');frame.className='rest-overlay';frame.src='break.html?overlay=1';frame.title='歇一会 · 摄像头动作休息';frame.allow='camera; autoplay';
+ frame=document.createElement('iframe');frame.className='rest-overlay';frame.src='break.html?overlay=1';frame.title='禁止久坐 · 摄像头动作休息';frame.allow='camera; autoplay';
  document.querySelector('.workspace-layout').inert=true;document.querySelector('.workspace-header').inert=true;document.body.append(frame);document.body.style.overflow='hidden';
 }
 document.getElementById('rest-again').onclick=openRest;

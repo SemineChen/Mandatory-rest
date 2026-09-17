@@ -6,6 +6,8 @@ import {createHash} from 'node:crypto';
 // seated-pair-0/4 (body and blink patches); all MediaPipe WASM variants stay.
 function includePublicAsset(path){
  const relative=path.replace(/^public\//,'');
+ // Asset provenance manifests are not runtime inputs; ship only the extension manifest.
+ if(['assets/voice/manifest.json','assets/sequences/manifest.json'].includes(relative))return false;
  if(/\.blend1?$/.test(relative))return false;
  if(['assets/hand_landmarker.task','assets/mascot.glb'].includes(relative))return false;
  if(relative==='assets/poses'||relative.startsWith('assets/poses/'))return false;

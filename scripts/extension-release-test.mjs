@@ -26,7 +26,7 @@ try{
    await expect.poll(()=>page.evaluate(()=>document.body.inert),{timeout:8000}).toBe(false);
   }else{
    const manager=await ctx.newPage();await manager.goto('chrome://extensions/');
-   await manager.locator('extensions-item').filter({hasText:'歇一会'}).locator('#enableToggle').click();
+   await manager.locator('extensions-item').filter({hasText:'禁止久坐'}).locator('#enableToggle').click();
    await page.bringToFront();
   }
   await expect.poll(()=>page.evaluate(()=>document.body.inert),{timeout:8000}).toBe(false);

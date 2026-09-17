@@ -16,7 +16,7 @@
   const root=overlay;
   const frame=document.createElement('iframe');
   frame.src=chrome.runtime.getURL('break.html?overlay=1');
-  frame.title='歇一会 · 休息练习';
+  frame.title='禁止久坐 · 休息练习';
   frame.allow='camera; autoplay';
   frame.style.cssText='display:block!important;width:100%!important;height:100%!important;border:0!important;background:transparent!important;pointer-events:auto!important;color-scheme:normal';
   root.append(frame);document.documentElement.append(overlay);frame.focus();
